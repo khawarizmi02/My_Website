@@ -138,3 +138,15 @@
   background: rgba(255, 255, 255, 0.6);
   filter: blur(750px);
 }
+
+.button-white {
+  width: 150px;
+  height: 40px;
+  background-color: white;
+  margin-left: 20px;
+  border-radius: 100px;
+}
+
+.text-bold{
+  font-weight: 750;
+}
