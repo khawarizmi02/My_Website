@@ -42,8 +42,8 @@ export const BulletContent = [
 
 export const HeroContent ={
   id: "hero",
-  tagline: "youre main value proposition",
-  summarize: "Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.",
+  tagline: "your main value proposition",
+  summarize: "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.",
   image: heroImage,
 }
 

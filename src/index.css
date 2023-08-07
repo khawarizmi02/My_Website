@@ -155,3 +155,8 @@
 .bg-gradient-blue{
   background: linear-gradient(0deg, #ADD8E6 0%, #F5F5F5 100%);
 }
+
+.custom-border {
+  border-radius: 0px 0px 400px 0px;
+  background: linear-gradient(180deg, #ADD8E6 67.19%, #F5F5F5 100%);
+}

@@ -7,15 +7,15 @@ import { Hero, Bullet, Navbar, Hook } from './components';
 
 function App() {
   return (
-      <div className="bg-primary w-full overflow-hidden">
+      <div className="bg-secondary w-full overflow-hidden">
         <div className={`${styles.paddingX} ${styles.flexCenter} bg-black`}>
           <div className={`${styles.boxWidth} bg-black`}>
             <Navbar />
           </div>
         </div>
         
-        <div className={`bg-primary ${styles.flexStart}`}>
-          <div className={`${styles.boxWidth}`}>
+        <div className={`bg-primary ${styles.flexStart} custom-border h-[90vh] `}>
+          <div className={`${styles.boxWidth} h-[100vh]`}>
             <Hero />
           </div>
         </div>
