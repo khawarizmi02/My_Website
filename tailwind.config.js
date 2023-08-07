@@ -10,11 +10,15 @@ export default {
       colors: {
         primary: "#ADD8E6",
         secondary: "#F5F5F5",
+        black: "#1F1C1C",
         dimWhite: "rgba(255, 255, 255, 0.7)",
         dimBlue: "rgba(9, 151, 124, 0.1)",
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
+      },
+      boxShadow: {
+        'custom-shadow': '0px 10px 10px 0px rgba(0, 0, 0, 0.20)'
       },
     },
     screens: {
