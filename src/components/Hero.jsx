@@ -1,8 +1,13 @@
 import React from 'react'
 
+import { HeroContent as content } from '../constant'
+
 const Hero = () => {
   return (
-    <div>Hero</div>
+    <div>
+      <div>
+      </div>
+    </div>
   )
 }
 

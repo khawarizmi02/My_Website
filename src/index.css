@@ -117,11 +117,12 @@
 }
 
 .feedback-card {
-  background: transparent;
+  background: whitesmoke;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .feedback-card:hover {
-  background: var(--black-gradient);
+  background: whitesmoke;
 }
 
 .blue__gradient {
@@ -149,4 +150,8 @@
 
 .text-bold{
   font-weight: 750;
+}
+
+.bg-gradient-blue{
+  background: linear-gradient(0deg, #ADD8E6 0%, #F5F5F5 100%);
 }
