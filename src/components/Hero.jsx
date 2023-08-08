@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import styles from '../style'
 import { HeroContent as content } from '../constant'
@@ -20,7 +21,7 @@ const Hero = () => {
 
         <button href='#contact-us' className='button-white mt-5 hover:bg-black hover:text-secondary'>
           <div className='text-bold text-[16px]'>
-            Contact Us
+            <Link to={`/contact-us`}>Contact Us</Link>
           </div>
         </button>
 

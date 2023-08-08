@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 import { logo, menu, close } from '../assets'
 import { navLinks } from '../constant'
@@ -23,13 +24,13 @@ const Navbar = () => {
               } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
               onClick={() => setActive(nav.title)}
             >
-            <a href={`#${nav.id}`}>{nav.title}</a>
+            <Link to={`/${nav.id}`}>{nav.title}</Link>
             </li> 
         )
         : <li>
             <button type="button" className="button-white">
               <div className="text-bold text-[16px]">
-                <a href={`#${nav.id}`}>{nav.title}</a>
+                <Link to={`/${nav.id}`}>{nav.title}</Link>
               </div>
             </button>
           </li>
