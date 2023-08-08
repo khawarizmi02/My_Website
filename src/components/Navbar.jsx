@@ -11,7 +11,9 @@ const Navbar = () => {
   return (
     <nav className="bg-black custom-shadow w-full flex py-6 justify-between items-center navbar">
 
-      <img src={logo} alt="hoobank" className="w-[124px] h-[30px]" />
+      <Link to={`/`}>
+        <img src={logo} alt="hoobank" className="w-[124px] h-[30px]" />
+      </Link>
       
       <ul className='list-none sm:flex hidden justify-end items-center flex-1'>
         {navLinks.map((nav, index) => (
@@ -61,7 +63,7 @@ const Navbar = () => {
                 } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
                 onClick={() => setActive(nav.title)}
               >
-                <a href={`#${nav.id}`}>{nav.title}</a>
+                <Link to={`/${nav.id}`}>{nav.title}</Link>
               </li>
             ))}
           </ul>
