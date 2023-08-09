@@ -3,7 +3,7 @@
 
 import styles from './style';
 import './index.css';
-import { Hero, Bullet, Navbar, Hook } from './components';
+import { Hero, Bullet, Navbar, Hook, Footer } from './components';
 
 function App() {
   return (
@@ -27,6 +27,7 @@ function App() {
         <div className={`bg-gradient-blue ${styles.paddingX} ${styles.flexCenter}`}>
           <div className={`${styles.boxWidth}`}>     
             <Bullet />
+            <Footer />
           </div>
         </div>
       </div>
