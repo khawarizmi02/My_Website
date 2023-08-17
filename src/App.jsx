@@ -1,32 +1,33 @@
-// import { Switch, Route, Link, Routes } from 'react-router-dom';
-// import { Home, About } from '../src/pages'
 
 import styles from './style';
 import './index.css';
-import { Hero, Bullet, Navbar, Hook, Footer } from './components';
+import { Hero, Sliders, Navbar, Footer, WhyUs, About,
+         WorkArea, Request, Testimonial, Services } from './components';
 
 function App() {
   return (
-      <div className="bg-secondary w-full overflow-hidden">
-        <div className={`${styles.paddingX} ${styles.flexCenter} bg-black`}>
+      <div className="bg-cream w-full overflow-hidden">
+        <div className={`${styles.paddingX} ${styles.flexCenter} bg-cream`}>
           <div className={`${styles.boxWidth} bg-black`}>
             <Navbar />
           </div>
         </div>
         
-        <div className={`bg-primary ${styles.flexStart} custom-border h-[90vh] `}>
-          <div className={`${styles.boxWidth} h-[100vh]`}>
+        <div className={`bg-cream ${styles.flexStart} `}>
+          <div className={`${styles.boxWidth}`}>
             <Hero />
           </div>
         </div>
 
-        <div className='bg-secondary w-full'>
-          <Hook />
-        </div>
-      
-        <div className={`bg-gradient-blue ${styles.paddingX} ${styles.flexCenter}`}>
+        <div className={`bg-cream ${styles.paddingX} ${styles.flexCenter}`}>
           <div className={`${styles.boxWidth}`}>     
-            <Bullet />
+            <WhyUs />
+            <About />
+            <Sliders />
+            <WorkArea />
+            <Services />
+            <Testimonial />
+            <Request />
             <Footer />
           </div>
         </div>

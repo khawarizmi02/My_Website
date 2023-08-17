@@ -8,11 +8,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: "#ADD8E6",
-        secondary: "#F5F5F5",
-        black: "#1F1C1C",
-        dimWhite: "rgba(255, 255, 255, 0.7)",
-        dimBlue: "rgba(9, 151, 124, 0.1)",
+        primary: "#1E2D66",
+        secondary: "#A2EB83",
+        accent: "#8B4513",
+        black: "#3c3c3c",
+        cream: "#FAF3DC",
+        tpCream: "rgba(244, 237, 215, 0.87)"
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
@@ -30,5 +31,7 @@ export default {
       xl: "1700px",
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar-hide')
+  ],
 }

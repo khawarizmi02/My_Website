@@ -3,7 +3,7 @@ import React from 'react'
 import styles from '../style'
 import { Navbar } from '../components'
 
-const Location = () => {
+const Pests = () => {
   return (
     <div className="bg-secondary w-full overflow-hidden">
       <div className={`${styles.paddingX} ${styles.flexCenter} bg-black`}>
@@ -13,11 +13,12 @@ const Location = () => {
       </div>
       <div className={`bg-gradient-blue ${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
-          Location page
+          Pests Library page
         </div>
       </div>
     </div>
   )
 }
 
-export default Location
+export default Pests
+

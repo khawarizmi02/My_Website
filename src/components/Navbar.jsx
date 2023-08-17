@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-import { logo, menu, close } from '../assets'
+import { logo1, menu, close } from '../assets'
 import { navLinks } from '../constant'
 
 const Navbar = () => {
@@ -9,10 +9,10 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   
   return (
-    <nav className="bg-black custom-shadow w-full flex py-6 justify-between items-center navbar">
+    <nav className="bg-cream w-full flex py-6 justify-between items-center navbar">
 
       <Link to={`/`}>
-        <img src={logo} alt="hoobank" className="w-[124px] h-[30px]" />
+        <img src={logo1} alt="hoobank" className="w-[153px] h-[56px]" />
       </Link>
       
       <ul className='list-none sm:flex hidden justify-end items-center flex-1'>
@@ -22,7 +22,7 @@ const Navbar = () => {
             <li 
               key={nav.id}
               className={`font-poppins font-normal cursor-pointer text-[16px] ${
-              active === nav.title ? "text-white" : "text-dimWhite"
+              active === nav.title ? "text-black" : "text-black"
               } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
               onClick={() => setActive(nav.title)}
             >
@@ -30,8 +30,8 @@ const Navbar = () => {
             </li> 
         )
         : <li>
-            <button type="button" className="button-white">
-              <div className="text-bold text-[16px]">
+            <button type="button" className="button">
+              <div className="text-[16px] text-cream font-bold">
                 <Link to={`/${nav.id}`}>{nav.title}</Link>
               </div>
             </button>
@@ -51,7 +51,7 @@ const Navbar = () => {
         <div
           className={`${
             !toggle ? "hidden" : "flex"
-          } p-6 bg-black-gradient absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
+          } p-6 bg-tpCream absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
         >
           
           <ul className="list-none flex justify-end items-start flex-1 flex-col">
@@ -59,7 +59,7 @@ const Navbar = () => {
               <li
                 key={nav.id}
                 className={`font-poppins font-medium cursor-pointer text-[16px] ${
-                  active === nav.title ? "text-white" : "text-dimWhite"
+                  active === nav.title ? "text-black" : "text-black"
                 } ${index === navLinks.length - 1 ? "mb-0" : "mb-4"}`}
                 onClick={() => setActive(nav.title)}
               >

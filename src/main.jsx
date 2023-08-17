@@ -10,7 +10,7 @@ import {
 import ErrorPage from './error-page.jsx';
 
 import App from './App.jsx'
-import { About, Contact, Location, Services } from "./pages"
+import { About, Contact, ChooseUs, Services, News, Pests  } from "./pages"
 
 const router = createBrowserRouter([
   {
@@ -27,15 +27,24 @@ const router = createBrowserRouter([
     element: <Contact />,
   },
   {
-    path: "/location",
-    element: <Location />,
+    path: "/why-us",
+    element: <ChooseUs />,
   },
   {
     path: "/services",
     element: <Services />,
   },
+  {
+    path: "/news",
+    element: <News />
+  },
+  {
+    path: "/pests",
+    element: <Pests />
+  }
 ]);
 
+console.log("heloo khawa")
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

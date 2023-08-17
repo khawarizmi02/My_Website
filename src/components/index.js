@@ -1,13 +1,23 @@
-import Bullet from './Bullet'
 import Hero from './Hero'
 import Navbar from './Navbar'
-import Hook from './Hook'
 import Footer from './Footer'
+import WhyUs from './WhyUs'
+import About from './About'
+import Sliders from './Sliders'
+import WorkArea from './WorkArea'
+import Services from './Services'
+import Testimonial from './Testimonial'
+import Request from './Request'
 
 export {
-  Bullet,
   Hero,
   Navbar,
-  Hook,
   Footer,
+  WhyUs,
+  About,
+  Sliders,
+  WorkArea,
+  Services,
+  Testimonial,
+  Request,
 };
