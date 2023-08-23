@@ -1,10 +1,13 @@
 import React from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import styles from '../style'
 import { HeroContent as content } from '../constant'
 
+
 const Hero = () => {
+
   return (
     <section className={`flex md:flex-row flex-col justify-evenly min-h-[375px] ${styles.paddingY}`} id="hero">
       <div className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}>
@@ -28,7 +31,7 @@ const Hero = () => {
       </div>
       
       <div className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative pl-none `}>
-        <img src={content.image} alt={content.id} className="w-[359px] h-[479px] rounded relative z-[5] hidden md:block"/>
+        <img src={content.image[3]} alt={content.id} className="w-[359px] h-[479px] rounded-[20px] relative z-[5] hidden md:block"/>
       </div>
     </section>
   )

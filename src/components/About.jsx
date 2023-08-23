@@ -6,7 +6,7 @@ import { AboutUsContent as content } from "../constant/index"
 
 const About = () => {
   return (
-    <section id="about" className={`${styles.paddingY} ${styles.flexCenter} flex-col relative `}>
+    <section id="about" className={`${styles.paddingY} ${styles.flexCenter} bg-primaryBlur flex-col relative `}>
       <div className='center'>
         <h1 className='text-center text-primary text-[50px] font-extrabold leading-relaxed'
         >About Us</h1>

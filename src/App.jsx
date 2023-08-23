@@ -2,7 +2,7 @@
 import styles from './style';
 import './index.css';
 import { Hero, Sliders, Navbar, Footer, WhyUs, About,
-         WorkArea, Request, Testimonial, Services } from './components';
+         WorkArea, Request, Testimonial, Services, Whatsapp, } from './components';
 
 function App() {
   return (
@@ -31,6 +31,8 @@ function App() {
             <Footer />
           </div>
         </div>
+
+      <Whatsapp />
       </div>
   );
 }

@@ -1,6 +1,9 @@
-import { affordable, bug, chemical, linkedin, facebook, twitter, instagram, photo8,
+import { affordable, bug, chemical, linkedin, facebook, twitter, instagram, 
+         photo8, photo5, photo3, photo1,
          photo16, photo18, photo11, photo17, photo19, photo9,
-         commercial, residential, construction, industrial, government, restaurant, } from '../assets'
+         commercial, residential, construction, industrial, government, restaurant,
+         fly, cockroaches, bedbug,mosquito, termite, fleas, ants, rats, birds, disinfection,
+         testimony, } from '../assets'
 
 export const navLinks = [
   {
@@ -54,7 +57,7 @@ export const HeroContent ={
   id: "hero",
   tagline: "your main value proposition",
   summarize: "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.",
-  image: photo8,
+  image: [photo8, photo5, photo3, photo1 ],
 }
 
 export const AboutUsContent ={
@@ -119,6 +122,63 @@ export const WorkAreaContent = [
     id: "restaurant",
     title: "food & beverage",
     image: restaurant,
+  },
+]
+
+export const ServicesContent = [
+  {
+    id: "flies", name: "Flies", image: fly,
+  },
+  {
+    id: "cockroaches", name: "Cockroaches", image: cockroaches,
+  },
+  {
+    id: "bed-bug", name: "Bedbug", image: bedbug,
+  },
+  {
+    id: "mosquito", name: "Mosquito", image: mosquito,
+  },
+  {
+    id: "termite", name: "Termite", image: termite,
+  },
+  {
+    id: "fleas", name: "Fleas", image: fleas,
+  },
+  {
+    id: "ants", name: "Ants", image: ants,
+  },
+  {
+    id: "rats-rodents", name: "Rats/Rodents", image: rats,
+  },
+  {
+    id: "birds", name: "Birds", image: birds,
+  },
+  {
+    id: "disinfection", name: "Disinfection", image: disinfection,
+  },
+]
+
+export const TestimonyContent = [
+  {
+    id: "name",
+    name: "sukiran",
+    title: "manager of Titan Pest Solution",
+    comment: "We had recurrent termite infestation in our house. We tried a few termite companies buy the termites kept coming back. Then, I found Ridpest. They investigated the problem and I liked it when they explained the steps to me. Ridpest's termite baiting system solved our problem in a short time. They gave me the level of assurance and comfort. I'm so happy with Ridpest.",
+    image: testimony,
+  },
+  {
+    id: "name",
+    name: "cockroaches",
+    title: "manager of Titan Pest Solution",
+    comment: "We had recurrent termite infestation in our house. We tried a few termite companies buy the termites kept coming back. Then, I found Ridpest. They investigated the problem and I liked it when they explained the steps to me. Ridpest's termite baiting system solved our problem in a short time. They gave me the level of assurance and comfort. I'm so happy with Ridpest.",
+    image: cockroaches,
+  },
+  {
+    id: "name",
+    name: "birds",
+    title: "manager of Titan Pest Solution",
+    comment: "We had recurrent termite infestation in our house. We tried a few termite companies buy the termites kept coming back. Then, I found Ridpest. They investigated the problem and I liked it when they explained the steps to me. Ridpest's termite baiting system solved our problem in a short time. They gave me the level of assurance and comfort. I'm so happy with Ridpest.",
+    image: birds,
   },
 ]
 

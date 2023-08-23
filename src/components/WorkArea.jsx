@@ -5,7 +5,7 @@ import { WorkAreaContent as contents } from "../constant"
 
 const WorkArea = () => {
   return (
-    <section id="about" className={`${styles.paddingY} ${styles.flexCenter} flex-col relative `}>
+    <section id="work-area" className={`${styles.paddingY} ${styles.flexCenter} flex-col relative `}>
       <div className='center'>
         <h1 className='text-center text-black text-[50px] font-extrabold leading-relaxed'>
           Where Do We Work?

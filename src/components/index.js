@@ -8,6 +8,7 @@ import WorkArea from './WorkArea'
 import Services from './Services'
 import Testimonial from './Testimonial'
 import Request from './Request'
+import Whatsapp from './Whatsapp'
 
 export {
   Hero,
@@ -20,4 +21,5 @@ export {
   Services,
   Testimonial,
   Request,
+  Whatsapp,
 };
