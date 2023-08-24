@@ -47,30 +47,30 @@ const Request = () => {
         <input 
           type='text'
           placeholder='Name'
-          className={`${styles.paragraph2} border-0 rounded-[5px] w-full sm:w-[480px] md:w-[640px] h-[55px] mt-5 pl-3`}
+          className={`${styles.paragraph2} ${styles.TextArea}`}
           name="name" value={name} onChange={handleChangeInput}
         />
         <input 
           type='email'
           placeholder='Email'
-          className={`${styles.paragraph2} border-0 rounded-[5px] w-full sm:w-[480px] md:w-[640px] h-[55px] mt-5 pl-3`}
+          className={`${styles.paragraph2} ${styles.TextArea}`}
           name="email" value={email} onChange={handleChangeInput}
         />
         <input 
           type='text'
           placeholder='Contact'
-          className={`${styles.paragraph2} border-0 rounded-[5px] w-full sm:w-[480px] md:w-[640px] h-[55px] mt-5 pl-3`}
+          className={`${styles.paragraph2} ${styles.TextArea}`}
           name="contact" value={contact} onChange={handleChangeInput}
         />
         <input 
           type='text'
           placeholder='Pest Type'
-          className={`${styles.paragraph2} border-0 rounded-[5px] w-full sm:w-[480px] md:w-[640px] h-[55px] mt-5 pl-3`}
+          className={`${styles.paragraph2} ${styles.TextArea}`}
           name="pest" value={pest} onChange={handleChangeInput}
         />
         <textarea 
           placeholder='Comment(required)'
-          className={`${styles.paragraph2} border-0 rounded-[5px] min-h-[214px] w-full sm:w-[480px] md:w-[640px] h-[55px] mt-5 pl-3`}
+          className={`${styles.paragraph2} ${styles.TextArea}  min-h-[214px] pt-2`}
           name='comment' value={comment} onChange={handleChangeInput}
         />
 

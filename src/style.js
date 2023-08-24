@@ -7,6 +7,7 @@ const styles = {
   paragraph2: "font-poppins font-normal text-black text-[20px] leading-[30.8px]",
   paragraph3: "font-poppins font-normal text-black text-[20px] text-center leading-[30.8px]",
   paragraph4: "font-poppins font-extralight text-black text-[20px] text-center leading-[30.8px]",
+  TextArea: "border-0 rounded-[5px] w-full sm:w-[480px] md:w-[640px] h-[55px] mt-5 pl-3",
 
   flexCenter: "flex justify-center items-center",
   flexStart: "flex justify-center items-start",

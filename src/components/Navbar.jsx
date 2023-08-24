@@ -9,10 +9,10 @@ const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   
   return (
-    <nav className="bg-cream w-full flex py-6 justify-between items-center navbar">
+    <nav className="bg-cream w-full flex py-4 justify-between items-center navbar">
 
       <Link to={`/`}>
-        <img src={logo1} alt="hoobank" className="w-[153px] h-[56px]" />
+        <img src={logo1} alt="hoobank" className="w-[172px] h-[74px]" />
       </Link>
       
       <ul className='list-none sm:flex hidden justify-end items-center flex-1'>
