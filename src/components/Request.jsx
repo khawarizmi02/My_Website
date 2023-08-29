@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 
 import styles from '../style';
+import { client } from '../client'
 
 const Request = () => {
 
@@ -23,12 +24,17 @@ const Request = () => {
       _type: 'contact',
       name: formData.name,
       email: formData.email,
-      contact: formData.contact,
-      type: formData.pest,
+      contactNum: formData.contact,
+      pestType: formData.pest,
       comment: formData.comment,
     };
 
-    console.log(contact);
+    client.create(contact)
+      .then(() => {
+        setLoading(false);
+        setIsFormSubmitted(true);
+      })
+      .catch((err) => console.log(err));
 
   };
   
@@ -43,47 +49,55 @@ const Request = () => {
         </p>
       </div>
 
-      <div className='flex flex-col justify-center items-center '>
-        <input 
-          type='text'
-          placeholder='Name'
-          className={`${styles.paragraph2} ${styles.TextArea}`}
-          name="name" value={name} onChange={handleChangeInput}
-        />
-        <input 
-          type='email'
-          placeholder='Email'
-          className={`${styles.paragraph2} ${styles.TextArea}`}
-          name="email" value={email} onChange={handleChangeInput}
-        />
-        <input 
-          type='text'
-          placeholder='Contact'
-          className={`${styles.paragraph2} ${styles.TextArea}`}
-          name="contact" value={contact} onChange={handleChangeInput}
-        />
-        <input 
-          type='text'
-          placeholder='Pest Type'
-          className={`${styles.paragraph2} ${styles.TextArea}`}
-          name="pest" value={pest} onChange={handleChangeInput}
-        />
-        <textarea 
-          placeholder='Comment(required)'
-          className={`${styles.paragraph2} ${styles.TextArea}  min-h-[214px] pt-2`}
-          name='comment' value={comment} onChange={handleChangeInput}
-        />
-
+      { isFormSubmitted ? 
+        (
+        <div>
+          <h3 className={`${styles.heading3} pt-5 mt-5`}>
+            Thank you for getting in touch!
+          </h3>
+        </div>
+        ): 
+        (
+        <div className='flex flex-col justify-center items-center '>
+          <input 
+            type='text'
+            placeholder='Name'
+            className={`${styles.paragraph2} ${styles.TextArea}`}
+            name="name" value={name} onChange={handleChangeInput}
+          />
+          <input 
+            type='email'
+            placeholder='Email'
+            className={`${styles.paragraph2} ${styles.TextArea}`}
+            name="email" value={email} onChange={handleChangeInput}
+          />
+          <input 
+            type='text'
+            placeholder='Contact'
+            className={`${styles.paragraph2} ${styles.TextArea}`}
+            name="contact" value={contact} onChange={handleChangeInput}
+          />
+          <input 
+            type='text'
+            placeholder='Pest Type'
+            className={`${styles.paragraph2} ${styles.TextArea}`}
+            name="pest" value={pest} onChange={handleChangeInput}
+          />
+          <textarea 
+            placeholder='Comment(required)'
+            className={`${styles.paragraph2} ${styles.TextArea}  min-h-[214px] pt-2`}
+            name='comment' value={comment} onChange={handleChangeInput}
+          />
         
-        <button 
-          type="button" 
-          className="button mt-5" 
-          onClick={handleSubmit}>
-          <p className='text-cream font-extralight text-[18px]'> 
-            {!loading ? 'Send Message' : 'Sending...'} 
-          </p>
-        </button>
-      </div>
+          <button 
+            type="button" 
+            className="button mt-5" 
+            onClick={handleSubmit}>
+            <p className='text-cream font-extralight text-[18px]'> 
+              {!loading ? 'Send Message' : 'Sending...'} 
+            </p>
+          </button>
+        </div>)}
     </section>
   )
 }
