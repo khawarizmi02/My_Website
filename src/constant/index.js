@@ -1,4 +1,4 @@
-import { affordable, bug, chemical, linkedin, facebook, twitter, instagram, 
+import { affordable, bug, chemical, linkedin, facebook, twitter, instagram, whatsappIcon, 
          photo8, photo5, photo3, photo1,
          photo16, photo18, photo11, photo17, photo19, photo9,
          commercial, residential, construction, industrial, government, restaurant,
@@ -184,65 +184,34 @@ export const TestimonyContent = [
 
 export const footerLinks = [
   {
-    title: "Useful Links",
-    links: [
-      {
-        name: "Content",
-        link: "https://www.hoobank.com/content/",
-      },
-      {
-        name: "How it Works",
-        link: "https://www.hoobank.com/how-it-works/",
-      },
-      {
-        name: "Create",
-        link: "https://www.hoobank.com/create/",
-      },
-      {
-        name: "Explore",
-        link: "https://www.hoobank.com/explore/",
-      },
-      {
-        name: "Terms & Services",
-        link: "https://www.hoobank.com/terms-and-services/",
-      },
-    ],
+    title: "Address",
+    name: "Titan Pest Solution Sdn.Bhd.",
+    companyNum : "(QWER12-Q)",
+    address: "No. 7, Jalan Wangsa Setia 1, Wangsa Melawati",
+    city: "Bayan Baru",
+    poscode: "12345",
+    district: "Pulau Pinang",
+    nation: "Malaysia",
   },
   {
-    title: "Community",
-    links: [
-      {
-        name: "Help Center",
-        link: "https://www.hoobank.com/help-center/",
-      },
-      {
-        name: "Partners",
-        link: "https://www.hoobank.com/partners/",
-      },
-      {
-        name: "Suggestions",
-        link: "https://www.hoobank.com/suggestions/",
-      },
-      {
-        name: "Blog",
-        link: "https://www.hoobank.com/blog/",
-      },
-      {
-        name: "Newsletters",
-        link: "https://www.hoobank.com/newsletters/",
-      },
-    ],
+    title: "Contact Info",
+    contactNum: "1234567890",
+    email: "youremail@gmail.com",
   },
   {
-    title: "Partner",
+    title: "Explore",
     links: [
       {
-        name: "Our Partner",
-        link: "https://www.hoobank.com/our-partner/",
+        name: "About Us",
+        link: "about",
       },
       {
-        name: "Become a Partner",
-        link: "https://www.hoobank.com/become-a-partner/",
+        name: "Pest Library",
+        link: "pests",
+      },
+      {
+        name: "News & Tips",
+        link: "news",
       },
     ],
   },
@@ -261,12 +230,7 @@ export const socialMedia = [
   },
   {
     id: "social-media-3",
-    icon: twitter,
-    link: "https://www.twitter.com/",
-  },
-  {
-    id: "social-media-4",
-    icon: linkedin,
+    icon: whatsappIcon,
     link: "https://www.linkedin.com/",
   },
 ];
