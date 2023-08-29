@@ -1,10 +1,11 @@
 
 import styles from './style';
 import './index.css';
-import { Hero, Sliders, Navbar, Footer, WhyUs, About,
+import { Hero, Navbar, Footer, WhyUs, About,
          WorkArea, Request, Testimonial, Services, Whatsapp, } from './components';
 
 function App() {
+
   return (
       <div className="bg-cream w-full overflow-hidden">
         <div className={`${styles.paddingX} ${styles.flexCenter} bg-cream`}>
@@ -23,7 +24,6 @@ function App() {
           <div className={`${styles.boxWidth}`}>     
             <WhyUs />
             <About />
-            <Sliders />
             <WorkArea />
             <Services />
             <Testimonial />
