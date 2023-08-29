@@ -33,7 +33,5 @@ export default {
       xl: "1700px",
     },
   },
-  plugins: [
-    require('tailwind-scrollbar-hide')
-  ],
+  plugins: [],
 }
