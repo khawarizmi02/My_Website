@@ -3,7 +3,7 @@ import React from 'react'
 import styles from '../style'
 import { Navbar, Footer } from '../components'
 
-const News = () => {
+const NewsInfo = () => {
   return (
     <div className="bg-cream w-full overflow-hidden">
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
@@ -22,4 +22,5 @@ const News = () => {
   )
 }
 
-export default News
+export default NewsInfo
+

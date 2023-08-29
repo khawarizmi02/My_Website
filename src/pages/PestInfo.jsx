@@ -3,7 +3,7 @@ import React from 'react'
 import styles from '../style'
 import { Navbar, Footer } from '../components'
 
-const News = () => {
+const PestInfo = () => {
   return (
     <div className="bg-cream w-full overflow-hidden">
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
@@ -13,7 +13,7 @@ const News = () => {
       </div>
       <div className={`bg-cream ${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
-          News & Tips page
+          Pests Animal page
 
           <Footer />
         </div>
@@ -22,4 +22,5 @@ const News = () => {
   )
 }
 
-export default News
+export default PestInfo
+
