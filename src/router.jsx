@@ -1,8 +1,6 @@
 import React from "react";
 
-import { About, Pests, ChooseUs, Contact, News, Services } from "./pages";
-import App from "./App";
-import ErrorPage from "./error-page";
+import { App, About, Pests, PestInfo, ChooseUs, Contact, News, NewsInfo, Services, ServiceInfo, ErrorPage, } from "./pages";
 
 const createRouter = () => {
   return [
@@ -28,13 +26,25 @@ const createRouter = () => {
       element: <Services />,
     },
     {
+      path: "/services/:serviceId",
+      element: <ServiceInfo />,
+    },
+    {
       path: "/news",
       element: <News />
     },
     {
+      path: "/news/:newsId",
+      element: <NewsInfo />
+    },
+    {
       path: "/pests",
       element: <Pests />
-    }
+    },
+    {
+      path: "/pests/:pestId",
+      element: <PestInfo />
+    },
   ];
 }
 

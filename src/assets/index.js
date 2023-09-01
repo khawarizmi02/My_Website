@@ -1,10 +1,8 @@
 import menu from "./menu.svg"
 import close from "./close.svg"
 import heroImage from "./heroImage.svg"
-import twitter from "./twitter.svg"
 import instagram from "./instagram.svg"
 import facebook from "./facebook.svg"
-import linkedin from "./linkedin.svg"
 import whatsappIcon from "./whatsappicon.svg"
 import whatsapp1 from "./whatsapp1.png"
 import lowlogo from "./lowlogo.svg"
@@ -45,7 +43,7 @@ export {
   menu,
   close,
   heroImage,
-  twitter, instagram, facebook, linkedin, whatsapp1, whatsappIcon,
+  instagram, facebook, whatsapp1, whatsappIcon,
   lowlogo,
   logo1,
   photo1, photo3, photo5, photo8,photo9,photo11,photo16,photo17,photo18,photo19,
