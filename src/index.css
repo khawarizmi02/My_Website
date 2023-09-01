@@ -58,6 +58,19 @@
   }
 }
 
+.gradient-green {
+  background: linear-gradient(165deg, #A2EB83 -17%, #1E2D66 75%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;}
+
+.gradient-blue {
+  background: linear-gradient(10deg, #1E2D66 38%, #8B4513 74%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 .feature-card:hover {
   background: var(--black-gradient);
   box-shadow: var(--card-shadow);
