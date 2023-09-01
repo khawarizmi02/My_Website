@@ -1,23 +1,36 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
 import { RxDotFilled } from 'react-icons/rx';
 
 import styles from '../style'
-import { TestimonyContent as content } from '../constant'
+import { urlFor, client } from '../client';
 
 const Testimonial = () => {
-
+  
+  const [testimony, setTestimony] = useState([]);
+  const [isLoading, setIsLoading] = useState(true); 
   const [currentIndex, setCurrentIndex] = useState(0);
+  
+  useEffect(() => {
+    const query = '*[_type == "testimonial"]';
+    setIsLoading(true);
+    
+    client.fetch(query).then((data) => {
+      setTestimony(data);
+      setIsLoading(false);
+    });
+  }, [])
+
 
   const prevSlide = () => {
     const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? content.length - 1 : currentIndex - 1;
+    const newIndex = isFirstSlide ? testimony.length - 1 : currentIndex - 1;
     setCurrentIndex(newIndex);
   };
 
   const nextSlide = () => {
-    const isLastSlide = currentIndex === content.length - 1;
+    const isLastSlide = currentIndex === testimony.length - 1;
     const newIndex = isLastSlide ? 0 : currentIndex + 1;
     setCurrentIndex(newIndex);
   };
@@ -25,6 +38,20 @@ const Testimonial = () => {
   const goToSlide = (slideIndex) => {
     setCurrentIndex(slideIndex);
   };
+
+  if (isLoading) {
+    return <div 
+    className='flex flex-col justify-center center 
+    font-poppins font-[20px] text-black text-center'
+    >
+    Loading...
+    </div>;  // Render a loading message while data is being fetched
+  }
+
+  if (!testimony[currentIndex]) return null;
+
+  const currentTestimonial = testimony[currentIndex];
+  const imageSrc = currentTestimonial && currentTestimonial.image ? urlFor(currentTestimonial.image).url() : null;
   
   return (
     <section id="services" className={`${styles.paddingY} ${styles.flexCenter} bg-primaryBlur flex-col relative group`}>
@@ -34,16 +61,17 @@ const Testimonial = () => {
         </h1>
       </div>
 
-      <div className='realtive'>
+      <div>
         <div className='flex flex-col items-center my-5'>
-          <img src={content[currentIndex].image} alt={content[currentIndex].id} className='w-[130px] h-[130px]' />
+          {/* Using the urlFor function to generate the correct image URL */}
+          <img src={imageSrc} alt={testimony[currentIndex].name} className='w-[130px] h-[130px] rounded-full' />
         
           <div className={`${styles.paragraph3} max-w-[900px] mt-5`}>
-            <p> {content[currentIndex].comment} </p>
+            <p> {testimony[currentIndex].feedback} </p>
           </div>
           
           <div className={` max-w-[900px] mt-5`}>
-            <p> <span className="font-bold">{content[currentIndex].name}</span> - {content[currentIndex].title} </p>
+            <p> <span className="font-bold">{testimony[currentIndex].name}</span> - {testimony[currentIndex].title} </p>
           </div>
         </div>
 
@@ -59,7 +87,7 @@ const Testimonial = () => {
         </div>
 
         <div className='flex top-4 justify-center py-2'>
-          {content.map((item, index) => (
+          {testimony.map((item, index) => (
             <div
               key={index}
               onClick={() => goToSlide(index)}
