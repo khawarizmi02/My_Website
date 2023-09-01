@@ -1,9 +1,8 @@
-import { affordable, bug, chemical, linkedin, facebook, twitter, instagram, whatsappIcon, 
+import { affordable, bug, chemical, facebook, instagram, whatsappIcon, 
          photo8, photo5, photo3, photo1,
          photo16, photo18, photo11, photo17, photo19, photo9,
          commercial, residential, construction, industrial, government, restaurant,
-         fly, cockroaches, bedbug,mosquito, termite, fleas, ants, rats, birds, disinfection,
-         testimony, } from '../assets'
+         fly, cockroaches, bedbug,mosquito, termite, fleas, ants, rats, birds, disinfection, } from '../assets'
 
 export const navLinks = [
   {
@@ -51,6 +50,12 @@ export const BulletContent = [
     description: 'Set your own schedule to get free inspection',
     logo: chemical,
   },
+]
+
+export const ServiceIntro =[
+  "Are you looking for a local Malaysia’s pest control company?",
+  "We’re the leading company that specialize in integrated Pest Management (IPM).",
+  "Our passionate technicians can help you with any kind of pest infestation that you have. We’ll perform a thorough analysis and inspection to identify the issue and begin the process of eliminating the pests with the suitable method.",
 ]
 
 export const HeroContent ={
@@ -148,37 +153,13 @@ export const ServicesContent = [
     id: "ants", name: "Ants", image: ants,
   },
   {
-    id: "rats-rodents", name: "Rats/Rodents", image: rats,
+    id: "rats", name: "Rats/Rodents", image: rats,
   },
   {
     id: "birds", name: "Birds", image: birds,
   },
   {
     id: "disinfection", name: "Disinfection", image: disinfection,
-  },
-]
-
-export const TestimonyContent = [
-  {
-    id: "name",
-    name: "sukiran",
-    title: "manager of Titan Pest Solution",
-    comment: "We had recurrent termite infestation in our house. We tried a few termite companies buy the termites kept coming back. Then, I found Ridpest. They investigated the problem and I liked it when they explained the steps to me. Ridpest's termite baiting system solved our problem in a short time. They gave me the level of assurance and comfort. I'm so happy with Ridpest.",
-    image: testimony,
-  },
-  {
-    id: "name",
-    name: "cockroaches",
-    title: "manager of Titan Pest Solution",
-    comment: "We had recurrent termite infestation in our house. We tried a few termite companies buy the termites kept coming back. Then, I found Ridpest. They investigated the problem and I liked it when they explained the steps to me. Ridpest's termite baiting system solved our problem in a short time. They gave me the level of assurance and comfort. I'm so happy with Ridpest.",
-    image: cockroaches,
-  },
-  {
-    id: "name",
-    name: "birds",
-    title: "manager of Titan Pest Solution",
-    comment: "We had recurrent termite infestation in our house. We tried a few termite companies buy the termites kept coming back. Then, I found Ridpest. They investigated the problem and I liked it when they explained the steps to me. Ridpest's termite baiting system solved our problem in a short time. They gave me the level of assurance and comfort. I'm so happy with Ridpest.",
-    image: birds,
   },
 ]
 
