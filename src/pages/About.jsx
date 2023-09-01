@@ -1,9 +1,60 @@
 import React from 'react'
+import { useState, useEffect } from 'react'
+import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
+import { RxDotFilled } from 'react-icons/rx';
 
-import { Navbar, Footer } from '../components'
+import { Navbar, Footer, WorkArea } from '../components'
 import styles from '../style'
+import { client, urlFor } from '../client';
 
 const About = () => {
+
+  const [about, setAbout] = useState([]);
+  const [certificates, setCertificates] = useState([]);
+  const [isLoading, setIsLoading] = useState(true); 
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const query = '*[_type == "about"]';
+    setIsLoading(true);
+
+    client.fetch(query).then((data) => {
+      setAbout(data);
+      setCertificates(data[0].certificates);
+      setIsLoading(false);
+    })
+  }, [])
+  
+  const prevSlide = () => {
+    const isFirstSlide = currentIndex === 0;
+    const newIndex = isFirstSlide ? certificates.length - 1 : currentIndex - 1;
+    setCurrentIndex(newIndex);
+  };
+
+  const nextSlide = () => {
+    const isLastSlide = currentIndex === certificates.length - 1;
+    const newIndex = isLastSlide ? 0 : currentIndex + 1;
+    setCurrentIndex(newIndex);
+  };
+
+  const goToSlide = (slideIndex) => {
+    setCurrentIndex(slideIndex);
+  };
+
+  if (isLoading) {
+    return <div 
+    className='flex flex-col justify-center center 
+    font-poppins font-[20px] text-black text-center'
+    >
+    Loading...
+    </div>;  // Render a loading message while data is being fetched
+  }
+
+  if (!certificates[currentIndex]) return null;
+
+  const currentCertificate = certificates[currentIndex];
+  const imageSrc = currentCertificate && currentCertificate.certificateImage ? urlFor(currentCertificate.certificateImage).url() : null;
+
   return (
       <div className="bg-cream w-full overflow-hidden">
         <div className={`${styles.paddingX} ${styles.flexCenter}`}>
@@ -13,7 +64,53 @@ const About = () => {
         </div>
         <div className={`bg-cream ${styles.paddingX} ${styles.flexCenter}`}>
           <div className={`${styles.boxWidth}`}>
-            About Page
+            <section id="about" className={`${styles.paddingY} ${styles.flexCenter} bg-secondaryBlur flex-col relative `}>
+              <h1 className={`${styles.heading1} text-center`}>About Us</h1>
+              <p className={`${styles.paragraph2} text-center`}> {about[0].introduction} </p>
+            </section>
+            <section id="about" className={`${styles.paddingY} ${styles.flexCenter} bg-cream flex-col relative `}>
+              <h1 className={`${styles.heading3} text-center`}>Vision</h1>
+              <p className={`${styles.paragraph2} text-center`}> {about[0].vision} </p>
+            </section>
+            <section id="about" className={`${styles.paddingY} ${styles.flexCenter} bg-cream flex-col relative `}>
+              <h1 className={`${styles.heading3} text-center`}>Mission</h1>
+              <p className={`${styles.paragraph2} text-center`}> {about[0].mission} </p>
+            </section>
+
+            <WorkArea />
+
+            <section id="about" className={`${styles.paddingY} ${styles.flexCenter} my-5 bg-primaryBlur flex-col relative group relative `}>
+              <h1 className={`${styles.heading1} text-center`}>Certificates</h1>
+              
+            <div>
+              <div className='flex flex-col items-center my-5'>
+                <img src={imageSrc} alt={certificates[currentIndex].name} className='w-100 h-100' />
+              </div>
+            
+              {/* Left Arrow */}
+              <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl 
+                        rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+              <BsChevronCompactLeft onClick={prevSlide} size={30} />
+              </div>
+              {/* Right Arrow */}
+              <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl 
+                        rounded-full p-2 bg-black/20 text-white cursor-pointer'>
+              <BsChevronCompactRight onClick={nextSlide} size={30} />
+              </div>
+
+              <div className='flex top-4 justify-center py-2'>
+                {certificates.map((item, index) => (
+                  <div
+                    key={index}
+                    onClick={() => goToSlide(index)}
+                    className='text-2xl cursor-pointer'
+                  >
+                    <RxDotFilled />
+                  </div>
+                ))}
+              </div>
+            </div>
+            </section>
             
             <Footer />
           </div>

@@ -1,0 +1,109 @@
+import React from 'react'
+import { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
+
+import styles from '../style'
+import { Navbar, Footer, Request } from '../components'
+import { urlFor, client } from '../client'
+
+const Info = ({ serviceId }) => {
+  
+  const [services, setServices] = useState([]);
+  const [isLoading, setIsLoading] = useState(true); 
+  
+  useEffect(() => {
+    const query = '*[_type == "services"]';
+    setIsLoading(true);
+
+    client.fetch(query).then((data) => {
+      setServices(data);
+      setIsLoading(false);
+    })
+  }, [])
+
+  if (isLoading) {
+    return <div 
+    className='flex flex-col justify-center center 
+    font-poppins font-[20px] text-black text-center'
+    >
+    Loading...
+    </div>;  // Render a loading message while data is being fetched
+  }
+  
+  const serviceName = services.map((item) => { return item.slug.current })
+  if ( !serviceName.includes(serviceId) ) return <>Page Not Found</> 
+
+  const service = services.find(data => data.slug.current === serviceId)
+
+  return (
+    <>
+    <section className={`flex md:flex-row flex-col justify-evenly min-h-[375px] ${styles.paddingY}`}>
+      <div className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-10 px-6`}>
+        <h1 className="flex-1 font-poppins font-bold ss:text-[72px] text-[52px] capitalize
+                        text-primary ss:leading-[100.8px] leading-[75px] max-w-[1000px]">
+          <span className='gradient-blue'> {service.name} </span>
+        </h1>
+        <div className={`${styles.paragraph2} max-w-[30em] mt-1`}>
+          {service.introduction}
+        </div>
+      </div>
+      <div className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative pl-none `}>
+        <img 
+          src={urlFor(service.image).url()} 
+          alt={service.slug.current} 
+          className={`h-[479px] relative z-[5] hidden md:block transition pl-2`}
+        />
+      </div>
+    </section>
+      
+    <section className={`${styles.paddingY} ${styles.flexCenter} flex-col relative `}>
+      <div className='center pb-5'>
+        <h1 className='text-center text-black text-[50px] font-extrabold leading-relaxed'>
+          What can we Do?
+        </h1>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 feedback-container relative z-[1]">
+        {service.servicesMethod.map((item) => (
+          <div className={`flex flex-col justify-around items-center px-5 pb-3
+                            min-w-[330px] max-w-[350px] bg-primaryBlur`}>
+      
+          <div className="relative min-w-[330px] max-w-[350px] h-[350px]">
+            <img src={urlFor(item.methodImage).url()} className="h-full w-full object-cover object-center rounded-[2px]" />
+          </div> 
+
+          <div className='flex flex-col items-center'>
+            <div className={`${styles.point} mt-5 uppercase text-center max-w-[250px]`}> {item.methodName} </div> {/* Adjust width if necessary */}
+            <div className={`${styles.paragraph2} text-center max-w-[250px]`}> {item.methodDescription} </div> {/* Adjust width if necessary */}
+          </div>
+         </div>
+        ))}
+      </div>
+    </section>
+    </>
+  )
+}
+
+const ServiceInfo = () => {
+
+  const { serviceId } = useParams();
+  
+  return (
+    <div className="bg-cream w-full overflow-hidden">
+      <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+        <div className={`${styles.boxWidth}`}>
+          <Navbar />
+        </div>
+      </div>
+      <div className={`bg-cream ${styles.paddingX} ${styles.flexCenter}`}>
+        <div className={`${styles.boxWidth}`}>
+          <Info serviceId={serviceId} />
+          <Request />
+          <Footer />
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default ServiceInfo
+
