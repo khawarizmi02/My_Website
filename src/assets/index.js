@@ -13,6 +13,7 @@ import photo16 from "./photo-16.png"
 import photo17 from "./photo-17.png"
 import photo18 from "./photo-18.png"
 import photo19 from "./photo-19.png"
+import photo20 from "./photo-20.jpeg"
 import photo3 from "./photo-3.png"
 import photo5 from "./photo-5.png"
 import photo8 from "./photo-8.jpeg";
@@ -46,7 +47,7 @@ export {
   instagram, facebook, whatsapp1, whatsappIcon,
   lowlogo,
   logo1,
-  photo1, photo3, photo5, photo8,photo9,photo11,photo16,photo17,photo18,photo19,
+  photo1, photo3, photo5, photo8,photo9,photo11,photo16,photo17,photo18,photo19,photo20,
   affordable,
   bug,
   chemical,
