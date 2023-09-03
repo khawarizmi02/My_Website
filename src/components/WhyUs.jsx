@@ -5,7 +5,7 @@ import styles from '../style'
 
 const WhyUs = () => {
   return (
-    <section id="clients" className={`${styles.paddingY} ${styles.flexCenter} flex-col relative `}>
+    <section className={`${styles.paddingY} ${styles.flexCenter} flex-col relative `}>
       <div className='center'>
         <h1 className='text-center text-black text-[50px] font-extrabold leading-relaxed'
         >Why Titan Pest Control?</h1>
