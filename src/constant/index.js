@@ -130,39 +130,6 @@ export const WorkAreaContent = [
   },
 ]
 
-export const ServicesContent = [
-  {
-    id: "flies", name: "Flies", image: fly,
-  },
-  {
-    id: "cockroaches", name: "Cockroaches", image: cockroaches,
-  },
-  {
-    id: "bed-bug", name: "Bedbug", image: bedbug,
-  },
-  {
-    id: "mosquito", name: "Mosquito", image: mosquito,
-  },
-  {
-    id: "termite", name: "Termite", image: termite,
-  },
-  {
-    id: "fleas", name: "Fleas", image: fleas,
-  },
-  {
-    id: "ants", name: "Ants", image: ants,
-  },
-  {
-    id: "rats", name: "Rats/Rodents", image: rats,
-  },
-  {
-    id: "birds", name: "Birds", image: birds,
-  },
-  {
-    id: "disinfection", name: "Disinfection", image: disinfection,
-  },
-]
-
 export const footerLinks = [
   {
     title: "Address",
