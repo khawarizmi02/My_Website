@@ -16,6 +16,7 @@ export default {
         tpCream: "rgba(244, 237, 215, 0.87)",
         primaryBlur: "rgba(30, 45, 102, 0.10)",
         secondaryBlur: "rgba(162, 235, 131, 0.07)",
+        blackBlur : "rgba(60, 60, 60, 0.5)",
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
