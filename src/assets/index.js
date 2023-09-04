@@ -1,10 +1,10 @@
 import menu from "./menu.svg"
 import close from "./close.svg"
-import heroImage from "./heroImage.svg"
 import instagram from "./instagram.svg"
 import facebook from "./facebook.svg"
 import whatsappIcon from "./whatsappicon.svg"
 import whatsapp1 from "./whatsapp1.png"
+import tiktok from "./tiktok.svg"
 import lowlogo from "./lowlogo.svg"
 import logo1 from "./logo1.svg"
 import photo1 from "./photo-1.png"
@@ -27,24 +27,11 @@ import restaurant from "./restaurant.png"
 import government from "./government.png"
 import commercial from "./commercial.png"
 import industrial from "./industrial.png"
-import fly from "./fly.png"
-import cockroaches from "./cockroaches.png"
-import bedbug from "./bed-bug.png"
-import mosquito from "./mosquito.png"
-import termite from "./termite.png"
-import fleas from "./flea.png"
-import ants from "./ants.png"
-import rats from "./rat.png"
-import birds from "./pigeon.png"
-import disinfection from "./disinfection.png"
-import testimony from "./testimony.png"
-
 
 export {
   menu,
   close,
-  heroImage,
-  instagram, facebook, whatsapp1, whatsappIcon,
+  instagram, facebook, whatsapp1, whatsappIcon, tiktok,
   lowlogo,
   logo1,
   photo1, photo3, photo5, photo8,photo9,photo11,photo16,photo17,photo18,photo19,photo20,
@@ -52,6 +39,4 @@ export {
   bug,
   chemical,
   construction, residential, restaurant, industrial, government, commercial,
-  fly, cockroaches, bedbug, mosquito, termite, fleas, ants, rats, birds, disinfection,
-  testimony,
 }
