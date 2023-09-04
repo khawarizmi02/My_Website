@@ -4,58 +4,12 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --black-gradient: linear-gradient(
-    144.39deg,
-    #ffffff -278.56%,
-    #6d6d6d -78.47%,
-    #11101d 91.61%
-  );
-  --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
-}
-
 * {
   scroll-behavior: smooth;
 }
 
 .box-shadow {
   box-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
-}
-
-.sidebar {
-  -webkit-animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  animation: slide-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-}
-
-@-webkit-keyframes slide-top {
-  0% {
-    -webkit-transform: translateY(100px);
-    transform: translateY(100px);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes slide-top {
-  0% {
-    -webkit-transform: translateY(100px);
-    transform: translateY(100px);
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0);
-  }
 }
 
 .gradient-green {
@@ -69,11 +23,6 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-}
-
-.feature-card:hover {
-  background: var(--black-gradient);
-  box-shadow: var(--card-shadow);
 }
 
 .feedback-container-whyus .feedback-card-whyus:last-child {
@@ -90,25 +39,6 @@
   background: radial-gradient(50% 50.00% at 50% 50.00%, rgba(162, 235, 131, 0.40) 39.06%, rgba(162, 235, 131, 0.00) 100%);
 }
 
-.feedback-card-brown {
-  border-radius: 20px;
-  background: radial-gradient(50% 50.00% at 50% 50.00%, #8B4513 56.77%, #FAF3DC 100%);
-}
-
-.blue__gradient {
-  background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #214d76 100%);
-  filter: blur(123px);
-}
-
-.pink__gradient {
-  background: linear-gradient(90deg, #f4c4f3 0%, #fc67fa 100%);
-  filter: blur(900px);
-}
-
-.white__gradient {
-  background: rgba(255, 255, 255, 0.6);
-  filter: blur(750px);
-}
 
 .button {
   width: 150px;
@@ -136,16 +66,5 @@
   align-items: center;
   justify-content: center;
   width: 100%;
-}
-
-/* Hide scrollbar for Chrome, Safari, and Opera */
-.scrollbar-hide::-webkit-scrollbar {
-    display: none;
-}
-
-/* Hide scrollbar for IE and Edge */
-.scrollbar-hide {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
 }
 
