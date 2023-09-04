@@ -38,7 +38,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <div className='text-cream font-poppins font-normal'> {exploreLink.title} </div>
+            <div className='text-cream font-poppins font-normal pt-6'> {exploreLink.title} </div>
             <ul className="list-none mt-4">
               { exploreLink.links.map((link, index) => (
                 <li
