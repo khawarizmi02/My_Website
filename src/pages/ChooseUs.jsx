@@ -1,7 +1,7 @@
 import React from 'react'
 
 import styles from '../style'
-import { Navbar, Footer } from '../components'
+import { Navbar, Footer, WhyUs, Whatsapp } from '../components'
 
 const Location = () => {
   return (
@@ -13,11 +13,12 @@ const Location = () => {
       </div>
       <div className={`bg-cream ${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
-          Choose Us page
-
+          <WhyUs />
           <Footer />
         </div>
       </div>
+
+      <Whatsapp />
     </div>
   )
 }

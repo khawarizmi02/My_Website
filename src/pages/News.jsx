@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 
 import { client, urlFor } from '../client'
 import styles from '../style'
-import { Navbar, Footer, Request } from '../components'
+import { Navbar, Footer, Whatsapp } from '../components'
 
 const formatDate = (isoString) => {
   const date = new Date(isoString);
@@ -102,10 +102,11 @@ const News = () => {
         <div className={`${styles.boxWidth}`}>
           <Intro />
           <NewList />
-          <Request />
           <Footer />
         </div>
       </div>
+
+      <Whatsapp />
     </div>
   )
 }

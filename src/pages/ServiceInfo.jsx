@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 
 import styles from '../style'
-import { Navbar, Footer, Request } from '../components'
+import { Navbar, Footer, Request, Whatsapp } from '../components'
 import { urlFor, client } from '../client'
 
 const Info = ({ serviceId }) => {
@@ -101,6 +101,8 @@ const ServiceInfo = () => {
           <Footer />
         </div>
       </div>
+
+      <Whatsapp />
     </div>
   )
 }

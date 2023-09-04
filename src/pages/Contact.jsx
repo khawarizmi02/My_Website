@@ -1,7 +1,7 @@
 import React from 'react'
 
 import styles from '../style'
-import { Navbar, Footer, Request } from '../components'
+import { Navbar, Footer, Request, Whatsapp } from '../components'
 
 const Contact = () => {
   return (
@@ -13,12 +13,12 @@ const Contact = () => {
       </div>
       <div className={`bg-cream ${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
-          Contact page
-
           <Request />
           <Footer />
         </div>
       </div>
+
+      <Whatsapp />
     </div>
   )
 }

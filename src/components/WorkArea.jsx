@@ -11,19 +11,20 @@ const WorkArea = () => {
           Where Do We Work?
         </h1>
       </div>
-      <div className="flex flex-wrap justify-center sm:justify-start items-center w-full feedback-container relative z-[1]">
+      <div className="grid grid-cols-2 md:grid-cols-3  feedback-container relative z-[1]">
         {contents.map((item, index) => (
-          <div className={`flex flex-col justify-around items-center px-10 py-12 rounded-[55px]
-                  min-w-[330px] max-w-[350px] mx-0 sm:mx-5 md:mx-10 my-5
+          <div className={`flex flex-col center justify-around items-center px-10 py-12 rounded-[55px]
+                 w-[200px] h-[220px] sm:h-[330px] mx-0 sm:mx-5 md:mx-10 my-5
                   ${index % 2 === 0 ? 'feedback-card-blue' : 'feedback-card-green'}`}>
           
-            <div className="relative w-[176px] h-[176px] hover:scale-105 transition-transform duration-200">
-              <div className="absolute top-[-5px] left-[-5px] w-[186px] h-[186px] rounded-full border-2 border-black"></div>
+            <div className="relative w-[100px] h-[100px] md:w-[176px] md:h-[176px] hover:scale-105 transition-transform duration-200">
+              <div className="absolute top-[-5px] left-[-5px] w-[110px] h-[110px] md:w-[186px] md:h-[186px] rounded-full border-2 border-black"></div>
               <img src={item.image} alt={item.id} className="w-full h-full rounded-full" />
             </div> 
             
             <div className='flex items-center'>
-              <div className={`${styles.point} mt-5 uppercase text-center max-w-[176px]`}> {item.title} </div>
+              <div className={`font-poppins font-semibold text-black text-[20px] xs:text-[30px] 
+                              mt-5 capitalize text-center max-w-full`}> {item.title} </div>
             </div>
 
           </div>

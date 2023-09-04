@@ -3,7 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
 import styles from '../style'
-import { Navbar, Footer } from '../components'
+import { Navbar, Footer, Whatsapp } from '../components'
 import { urlFor, client } from '../client'
 
 const Info = ({ pestId }) => {
@@ -107,6 +107,8 @@ const PestInfo = () => {
           <Footer />
         </div>
       </div>
+
+      <Whatsapp />
     </div>
   )
 }

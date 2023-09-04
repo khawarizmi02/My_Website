@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
 import styles from '../style'
-import { Navbar, Footer } from '../components'
+import { Navbar, Footer, Whatsapp } from '../components'
 import { urlFor, client } from '../client'
 import { photo20 } from '../assets'
 
@@ -35,7 +35,7 @@ const PestList = () => {
   return (
     <section className={`${styles.flexStart} ${styles.paddingX} ${styles.paddingY}`}>
       <div className='flex flex-col justify-center items-center'>
-        <div className={`${styles.heading1} text-center`}> Pest Library </div>
+        <div className={`${styles.heading3} text-center`}> Pest Library </div>
         <div className='font-poppins font-light text-[20px]'> Dive deep into the world of pests and discover what's lurking in the shadows. </div>
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 py-6'>
           {pests.map((item) => (
@@ -62,7 +62,7 @@ const Intro = () => {
           <img src={photo20} className='w-full h-full object-cover rounded-[10px]'/>
         </div>
         <div className='flex flex-col w-full justify-center'> 
-          <div className={`${styles.point} capitalize`}>
+          <div className={`${styles.heading1} capitalize`}>
             Specialised IPM Solutions
           </div>
           <div className={`${styles.paragraph2} pt-3`}>
@@ -94,6 +94,8 @@ const Pests = () => {
           <Footer />
         </div>
       </div>
+
+      <Whatsapp />
     </div>
   )
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import styles from '../style';
 import '../index.css';
 import { Hero, Navbar, Footer, WhyUs, About,
-         WorkArea, Request, Testimonial, Services, Whatsapp, } from '../components';
+         WorkArea, Request, Services, Whatsapp, } from '../components';
 
 function App() {
 
@@ -26,7 +26,6 @@ function App() {
             <About />
             <WorkArea />
             <Services />
-            <Testimonial />
             <Request />
             <Footer />
           </div>

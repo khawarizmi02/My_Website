@@ -2,16 +2,16 @@ import React from 'react'
 
 import styles from '../style'
 import { ServiceIntro } from '../constant'
-import { Navbar, Footer, Request, Services as ServiceComp } from '../components'
+import { Navbar, Footer, Request, Whatsapp, Services as ServiceComp } from '../components'
 import { photo3 } from '../assets'
 
 const Introduction = () => {
   return (
     <section className={`flex md:flex-row flex-col justify-evenly min-h-[375px] ${styles.paddingY}`} id="hero">
       <div className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-10 px-6`}>
-        <h1 className="flex-1 font-poppins font-bold ss:text-[72px] text-[52px] capitalize
+        <h1 className="flex-1 font-poppins font-bold ss:text-[72px] text-[52px] 
                         text-primary ss:leading-[100.8px] leading-[75px] max-w-[1000px]">
-          <span className='gradient-green'>Titan</span><span className='gradient-blue'> Pest Solution</span>
+          Titan Pest Solution
         </h1>
         <div className={`${styles.paragraph2} max-w-[30em] mt-1`}>
           {ServiceIntro.map((data) => (
@@ -46,6 +46,8 @@ const Services = () => {
           <Footer />
         </div>
       </div>
+
+      <Whatsapp />
     </div>
   )
 }

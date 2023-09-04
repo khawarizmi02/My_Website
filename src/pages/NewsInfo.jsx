@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react'
 import { RxCalendar } from 'react-icons/rx'
 
 import styles from '../style'
-import { Navbar, Footer, Request } from '../components'
+import { Navbar, Footer, Whatsapp } from '../components'
 import { client, urlFor, RenderBlockContent } from '../client'
 
 
@@ -115,10 +115,11 @@ const NewsInfo = () => {
       <div className={`bg-cream ${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
           <NewsContent newsId={newsId}/>
-          <Request />
           <Footer />
         </div>
       </div>
+
+      <Whatsapp />
     </div>
   )
 }
