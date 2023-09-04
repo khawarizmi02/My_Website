@@ -51,7 +51,7 @@ const Services = () => {
           
             <div className="relative w-[130px] h-[130px] xs:w-[147px] xs:h-[147px] hover:scale-105 transition-transform duration-200">
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
-                              feedback-card-brown w-[150px] h-[150px] xs:w-[170px] xs:h-[170px] z-[-1] ">
+                              w-[150px] h-[150px] xs:w-[170px] xs:h-[170px] z-[-1] ">
               </div>
               <Link to={`/services/${item.slug.current}-services`}>
                 <img src={urlFor(item.image).url()} alt={item.slug.current} className="w-full h-full rounded-full object-cover z-10" />
