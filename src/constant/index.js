@@ -1,10 +1,13 @@
-import { affordable, bug, chemical, facebook, instagram, whatsappIcon, 
+import { affordable, bug, chemical, facebook, instagram, whatsappIcon, tiktok,
          photo8, photo5, photo3, photo1,
          photo16, photo18, photo11, photo17, photo19, photo9,
-         commercial, residential, construction, industrial, government, restaurant,
-         fly, cockroaches, bedbug,mosquito, termite, fleas, ants, rats, birds, disinfection, } from '../assets'
+         commercial, residential, construction, industrial, government, restaurant} from '../assets'
 
 export const navLinks = [
+  {
+    id: "",
+    title: "Home",
+  },
   {
     id: "about",
     title: "About",
@@ -33,35 +36,41 @@ export const navLinks = [
 
 export const BulletContent = [
   {
-    id: 'affordable-price',
-    title: 'Affordable Price',
-    description: 'We have a great services yet we also offer an affordable price.',
+    id: 'professional',
+    title: 'Professional & Experience',
+    description: 'Our team combines professionalism with years of hands-on experience. Trust in Titan Pest Control to deliver outstanding results, backed by a legacy of successful pest management.',
     logo: affordable,
   },
   {
-    id: 'our-services',
-    title: 'Our Services',
-    description: 'We provides various type of services',
+    id: 'certified',
+    title: 'Certified & Licensed Team',
+    description: 'Our team is extensively trained and meets the top industry standards. With both certification and licensing, we promise effective and safe services.',
     logo: bug,
   },
   {
-    id: 'set-schedule',
-    title: 'Save Chemical',
-    description: 'Set your own schedule to get free inspection',
+    id: 'fast-response',
+    title: 'Fast Response',
+    description: 'When pests strike, time is of the essence. With Titan Pest Control, you can count on our swift action and timely solutions, ensuring your peace of mind is quickly restored.',
+    logo: chemical,
+  },
+  {
+    id: 'in-house-entomologist',
+    title: 'In-House Entomologist',
+    description: "Titan Pest Control doesn't just treat pests; we understand them, ensuring more effective and informed solutions.",
     logo: chemical,
   },
 ]
 
 export const ServiceIntro =[
-  "Are you looking for a local Malaysia’s pest control company?",
+  "Are you looking for a local Malaysia’s pest control company in Penang?",
   "We’re the leading company that specialize in integrated Pest Management (IPM).",
   "Our passionate technicians can help you with any kind of pest infestation that you have. We’ll perform a thorough analysis and inspection to identify the issue and begin the process of eliminating the pests with the suitable method.",
 ]
 
 export const HeroContent ={
   id: "hero",
-  tagline: "your main value proposition",
-  summarize: "Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et culpa duis.",
+  tagline: "Toward better environment",
+  summarize: "Embracing advanced, eco-friendly techniques, our Titan Pest Control Service not only ensures your home remains an unwavering fortress against unwanted intruders, but also pledges to play an active role in preserving the delicate balance of our shared ecosystem, making every treatment a step towards a safer, greener future.",
   image: [photo8, photo5, photo3, photo1 ],
 }
 
@@ -133,18 +142,18 @@ export const WorkAreaContent = [
 export const footerLinks = [
   {
     title: "Address",
-    name: "Titan Pest Solution Sdn.Bhd.",
-    companyNum : "(QWER12-Q)",
-    address: "No. 7, Jalan Wangsa Setia 1, Wangsa Melawati",
-    city: "Bayan Baru",
-    poscode: "12345",
+    name: "Titan Pest Solution",
+    companyNum : "",
+    address: "1-3-18, Goldhill Complex, Tingkat Paya Terubong1",
+    city: "Air Itam",
+    poscode: "11060",
     district: "Pulau Pinang",
     nation: "Malaysia",
   },
   {
     title: "Contact Info",
-    contactNum: "1234567890",
-    email: "youremail@gmail.com",
+    contactNum: "016-969 3525",
+    email: "titanpestsolution@gmail.com",
   },
   {
     title: "Explore",
@@ -167,17 +176,22 @@ export const footerLinks = [
 
 export const socialMedia = [
   {
-    id: "social-media-1",
+    id: "instagram",
     icon: instagram,
     link: "https://www.instagram.com/",
   },
   {
-    id: "social-media-2",
+    id: "tiktok",
+    icon: tiktok,
+    link: "https://www.instagram.com/",
+  },
+  {
+    id: "facebook",
     icon: facebook,
     link: "https://www.facebook.com/",
   },
   {
-    id: "social-media-3",
+    id: "whatsapp",
     icon: whatsappIcon,
     link: "https://www.linkedin.com/",
   },
