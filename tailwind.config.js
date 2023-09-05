@@ -12,7 +12,7 @@ export default {
         secondary: "#A2EB83",
         accent: "#8B4513",
         black: "#3c3c3c",
-        cream: "#FAF3DC",
+        cream: "#FCFCFD",
         tpCream: "rgba(244, 237, 215, 0.87)",
         primaryBlur: "rgba(30, 45, 102, 0.10)",
         secondaryBlur: "rgba(162, 235, 131, 0.07)",
