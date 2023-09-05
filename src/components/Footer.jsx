@@ -54,7 +54,7 @@ const Footer = () => {
 
       <div className="w-full flex justify-between items-center md:flex-row flex-col pt-6 border-t-[1px] border-t-cream px-4">
         <p className="font-poppins font-light text-center text-[18px] leading-[27px] text-cream">
-          Copyright Ⓒ 2023 Titan Pest Solution Sdn.Bhd. All Rights Reserved.
+          Copyright Ⓒ 2023 Titan Pest Solution. All Rights Reserved.
         </p>
 
         <div className="flex flex-row md:mt-0 mt-6">
