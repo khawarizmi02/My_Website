@@ -64,7 +64,7 @@ const Info = () => {
             <img src={photo19} alt='photo19' className='w-full h-full rounded-[10px] object-cover'/>
           </div>
           <div className='flex flex-col w-full px-6'>
-            <h1 className={`${styles.heading1} text-center`}>About Us</h1>
+            <h1 className={`${styles.heading3} text-center`}>About Us</h1>
             <p className={`${styles.paragraph2} text-justify`}> {about[0].introduction} </p>
           </div>
         </div>
@@ -72,11 +72,11 @@ const Info = () => {
             
       <section className='grid grid-cols-1 md:grid-cols-2 bg-primaryBlur'>
         <div className={`${styles.paddingY} px-6 flex-col relative`}>
-          <h1 className={`${styles.heading3} text-center`}>Vision</h1>
+          <h1 className={`${styles.heading1} text-center`}>Vision</h1>
           <p className={`${styles.paragraph2} text-justify`}> {about[0].vision} </p>
         </div>
         <div className={`${styles.paddingY} px-6 flex-col relative`}>
-          <h1 className={`${styles.heading3} text-center`}>Mission</h1>
+          <h1 className={`${styles.heading1} text-center`}>Mission</h1>
           <p className={`${styles.paragraph2} text-justify`}> {about[0].mission} </p>
         </div>
       </section>
