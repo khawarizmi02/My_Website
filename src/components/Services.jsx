@@ -29,8 +29,6 @@ const Services = () => {
     </div>;  // Render a loading message while data is being fetched
   }
 
-  console.log(services[0].name);
-  
   return (
     <section id="services" className={`${styles.paddingY} ${styles.flexCenter} flex-col relative `}>
       <div className='center'> 

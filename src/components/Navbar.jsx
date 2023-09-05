@@ -23,7 +23,7 @@ const Navbar = () => {
               key={nav.id}
               className={`font-poppins font-normal cursor-pointer text-[16px] ${
               active === nav.title ? "text-black" : "text-black"
-              } ${index === navLinks.length - 1 ? "mr-0" : "mr-10"}`}
+              } ${index === navLinks.length - 1 ? "mr-0" : "mr-7"}`}
               onClick={() => setActive(nav.title)}
             >
             <Link to={`/${nav.id}`}>{nav.title}</Link>
