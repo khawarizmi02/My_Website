@@ -4,6 +4,7 @@ import { PortableText } from '@portabletext/react';
 import { BsFillCircleFill } from "react-icons/bs";
 
 import "./index.css"
+import { lowlogo as DEFAULT_IMAGE_URL } from './assets';
 
 export const client = createClient({
 
@@ -17,7 +18,14 @@ export const client = createClient({
 });
 
 const builder = imageUrlBuilder(client);
-export const urlFor = (source) => builder.image(source);
+export const urlFor = (source) => {
+  if (!source) {
+    return {
+      url: () => DEFAULT_IMAGE_URL
+    };
+  }
+  return builder.image(source);
+};
 
 const components = {
   block: {
