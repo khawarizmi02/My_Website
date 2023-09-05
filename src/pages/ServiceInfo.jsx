@@ -29,28 +29,25 @@ const Info = ({ serviceId }) => {
     Loading...
     </div>;  // Render a loading message while data is being fetched
   }
-  
-  const serviceName = services.map((item) => { return item.slug.current })
-  if ( !serviceName.includes(serviceId) ) return <>Page Not Found</> 
 
-  const service = services.find(data => data.slug.current === serviceId)
+  const filteredService = services.find( item => item.slug.current === serviceId) 
 
   return (
     <>
     <section className={`flex md:flex-row flex-col justify-evenly min-h-[375px] ${styles.paddingY}`}>
       <div className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-10 px-6`}>
-        <h1 className="flex-1 font-poppins font-bold ss:text-[72px] text-[52px] capitalize
+        <h1 className="flex-1 font-poppins font-bold text-primary ss:text-[72px] text-[52px] capitalize
                         text-primary ss:leading-[100.8px] leading-[75px] max-w-[1000px]">
-          <span className='gradient-blue'> {service.name} </span>
+          {filteredService.name}
         </h1>
         <div className={`${styles.paragraph2} max-w-[30em] mt-1`}>
-          {service.introduction}
+          {filteredService.introduction}
         </div>
       </div>
       <div className={`flex-1 flex ${styles.flexCenter} md:my-0 my-10 relative pl-none `}>
         <img 
-          src={urlFor(service.image).url()} 
-          alt={service.slug.current} 
+          src={urlFor(filteredService.image).url()} 
+          alt={filteredService.slug.current} 
           className={`h-[479px] relative z-[5] hidden md:block transition pl-2`}
         />
       </div>
@@ -62,8 +59,8 @@ const Info = ({ serviceId }) => {
           What can we Do?
         </h1>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 feedback-container relative z-[1]">
-        {service.servicesMethod.map((item) => (
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 feedback-container relative z-[1]">
+        {filteredService.servicesMethod.map((item) => (
           <div className={`flex flex-col justify-around items-center px-5 pb-3
                             min-w-[330px] max-w-[350px] bg-primaryBlur`}>
       
