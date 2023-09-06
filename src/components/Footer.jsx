@@ -23,11 +23,11 @@ const Footer = () => {
         </div>
         
         <div className="flex-[1.5] w-full flex flex-row justify-around flex-wrap md:mt-0 mt-10">
-          <div className='text-cream font-poppins font-normal'>
+          <div className='text-cream font-poppins font-normal text-center sm:text-left'>
             <div> {address.title} </div>
             <div className='font-light'>
               <div> {address.name} {address.companyNum} </div>
-              <div> {address.address} </div>
+              <div className='max-w-[330px]'> {address.address} </div>
               <div> {address.poscode} {address.city} </div>
               <div> {address.district} {address.nation} </div>
             </div>
@@ -38,12 +38,13 @@ const Footer = () => {
           </div>
 
           <div>
-            <div className='text-cream font-poppins font-normal pt-6'> {exploreLink.title} </div>
+            <div className='text-cream font-poppins font-normal pt-6 text-center sm:text-left'> {exploreLink.title} </div>
             <ul className="list-none mt-4">
               { exploreLink.links.map((link, index) => (
                 <li
                   key={link.name}
-                  className={`font-poppins font-light text-[16px] leading-[24px] text-cream hover:text-secondary cursor-pointer
+                  className={`font-poppins font-light text-[16px] leading-[24px] text-cream 
+                    hover:text-secondary cursor-pointer text-center sm:text-left
                     ${index !== exploreLink.links.length - 1 ? "mb-4" : "mb-0"}`}
                 > <Link to={`/${link.link}`}>  {link.name} </Link> </li>
               ))}
@@ -57,19 +58,21 @@ const Footer = () => {
           Copyright Ⓒ 2023 Titan Pest Solution. All Rights Reserved.
         </p>
 
-        <div className="flex flex-row md:mt-0 mt-6">
-          <div><p className={`${styles.paragraph} px-4`}> Hang with us on these social sites </p></div>
-          {socialMedia.map((social, index) => (
-            <img
-              key={social.id}
-              src={social.icon}
-              alt={social.id}
-              className={`w-[30px] h-[30px] object-contain cursor-pointer fill-black ${
-                index !== socialMedia.length - 1 ? "mr-4" : "mr-0"
-              }`}
-              onClick={() => window.open(social.link)}
-            />
-          ))}
+        <div className="flex flex-col sm:flex-row items-center md:mt-0 mt-3">
+          <div><p className={`${styles.paragraph} text-center px-4`}> Hang with us on these social sites </p></div>
+          <div className='grid grid-cols-4 pt-3 sm:pt-0'>
+            {socialMedia.map((social, index) => (
+              <img
+                key={social.id}
+                src={social.icon}
+                alt={social.id}
+                className={`w-[30px] h-[30px] object-contain cursor-pointer justify-center items-center fill-black ${
+                  index !== socialMedia.length - 1 ? "mr-4" : "mr-0"
+                }`}
+                onClick={() => window.open(social.link)}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section> 
