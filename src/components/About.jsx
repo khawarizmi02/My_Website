@@ -12,7 +12,7 @@ const About = () => {
         >About Us</h1>
       </div>
 
-      <div className={`${styles.paragraph3} max-w-[967px] mt-5`}>
+      <div className={`${styles.paragraph3} max-w-[967px] mt-5 px-6`}>
         <p> {content.about} </p>
       </div>
 
@@ -22,12 +22,12 @@ const About = () => {
         </div>
       </button>
       
-      <div className='center'>
+      <div className='center pt-3'>
         <h1 className='text-center text-primary text-[50px] font-extrabold leading-relaxed'
         >YOUR RELIABLE PEST CONTROL OPERATOR</h1>
       </div>
       
-      <div className={`${styles.paragraph3} max-w-[967px] mt-5`}>
+      <div className={`${styles.paragraph3} max-w-[967px] mt-5 px-6`}>
         <p> {content.hook} </p>
       </div>
     </section>
