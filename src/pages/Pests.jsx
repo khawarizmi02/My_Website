@@ -59,7 +59,7 @@ const Intro = () => {
     <section className={`${styles.paddingX} pb-3`}>
       <div className='grid grid-cols-1 md:grid-cols-[40%,60%] gap-6'>
         <div className='text-center px-6 py-3 w-full'> 
-          <img src={photo20} className='w-full h-full object-cover rounded-[10px]'/>
+          <img src={photo20} className='w-full h-[300px] xs:h-[500px] sm:h-[800px] md:h-full object-cover object-top rounded-[10px]'/>
         </div>
         <div className='flex flex-col w-full justify-center'> 
           <div className={`${styles.heading1} capitalize`}>
