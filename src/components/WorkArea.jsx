@@ -13,8 +13,8 @@ const WorkArea = () => {
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3  feedback-container relative z-[1]">
         {contents.map((item, index) => (
-          <div className={`flex flex-col center justify-around items-center px-10 py-12 rounded-[55px]
-                 w-[200px] h-[220px] sm:h-[330px] mx-0 sm:mx-5 md:mx-10 my-5
+          <div className={`flex flex-col center items-center px-10 py-12 rounded-[55px]
+                 w-[200px] h-[220px] sm:w-[330px] mx-0 sm:mx-5 md:mx-10 my-0 md:my-9
                   ${index % 2 === 0 ? 'feedback-card-blue' : 'feedback-card-green'}`}>
           
             <div className="relative w-[100px] h-[100px] md:w-[176px] md:h-[176px] hover:scale-105 transition-transform duration-200">
@@ -23,7 +23,7 @@ const WorkArea = () => {
             </div> 
             
             <div className='flex items-center'>
-              <div className={`font-poppins font-semibold text-black text-[20px] xs:text-[30px] 
+              <div className={`font-poppins font-semibold text-black text-[20px] sm:text-[30px] 
                               mt-5 capitalize text-center max-w-full`}> {item.title} </div>
             </div>
 
@@ -35,3 +35,4 @@ const WorkArea = () => {
 }
 
 export default WorkArea
+

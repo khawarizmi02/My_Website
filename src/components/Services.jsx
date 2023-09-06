@@ -44,8 +44,8 @@ const Services = () => {
       </div>
       <div className="grid grid-cols-2 ss:grid-cols-3 sm:grid-cols-4 md:grid-cols-5 w-full feedback-container relative z-[1]">
         {services.map((item) => (
-          <div className={`flex flex-col justify-around items-center px-10 py-12 rounded-[55px]
-                  min-w-[170px] max-w-[170px] mx-0 sm:mx-5 md:mx-10 my-5`}>
+          <div className={`flex flex-col items-center px-10 py-12 rounded-[55px]
+                  min-w-[170px] max-w-full mx-0 sm:mx-5 md:mx-10 my-5`}>
           
             <div className="relative w-[130px] h-[130px] xs:w-[147px] xs:h-[147px] hover:scale-105 transition-transform duration-200">
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
