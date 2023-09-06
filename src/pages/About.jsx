@@ -14,6 +14,7 @@ const Info = () => {
   const [certificates, setCertificates] = useState([]);
   const [isLoading, setIsLoading] = useState(true); 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [fadeIn, setFadeIn] = useState(true);
 
   useEffect(() => {
     const query = '*[_type == "about"]';
@@ -88,7 +89,8 @@ const Info = () => {
               
         <div>
           <div className='flex flex-col items-center my-5'>
-            <img src={imageSrc} alt={certificates[currentIndex].name} className='w-100 h-100' />
+            <img src={imageSrc} alt={certificates[currentIndex].name} className={`max-h-[1000px] transition 
+                    duration-1000 ${fadeIn ? 'opacity-100' : 'opacity-0'}`} />
           </div>
             
           {/* Left Arrow */}
