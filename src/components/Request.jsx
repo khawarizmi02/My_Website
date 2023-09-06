@@ -37,6 +37,11 @@ const Request = () => {
       .catch((err) => console.log(err));
 
   };
+
+  const handleSubmitForm = (e) => {
+    e.preventDefault(); // Prevent default form submission
+     handleSubmit();
+  };
   
   return (
     <section className={`${styles.paddingY} ${styles.flexCenter} flex-col relative`}> 
@@ -58,46 +63,50 @@ const Request = () => {
         </div>
         ): 
         (
-        <div className='flex flex-col justify-center items-center '>
+        <form onSubmit={handleSubmitForm} className='flex flex-col justify-center items-center '>
           <input 
+            required
             type='text'
             placeholder='Name'
             className={`${styles.paragraph2} ${styles.TextArea}`}
             name="name" value={name} onChange={handleChangeInput}
           />
           <input 
+            required
             type='email'
             placeholder='Email'
             className={`${styles.paragraph2} ${styles.TextArea}`}
             name="email" value={email} onChange={handleChangeInput}
           />
           <input 
+            required
             type='text'
             placeholder='Contact'
             className={`${styles.paragraph2} ${styles.TextArea}`}
             name="contact" value={contact} onChange={handleChangeInput}
           />
           <input 
+            required
             type='text'
             placeholder='Pest Type'
             className={`${styles.paragraph2} ${styles.TextArea}`}
             name="pest" value={pest} onChange={handleChangeInput}
           />
           <textarea 
+            required
             placeholder='Comment(required)'
             className={`${styles.paragraph2} ${styles.TextArea}  min-h-[214px] pt-2`}
             name='comment' value={comment} onChange={handleChangeInput}
           />
         
           <button 
-            type="button" 
-            className="button mt-5" 
-            onClick={handleSubmit}>
+            type="submit" 
+            className="button mt-5">
             <p className='text-cream font-extralight text-[18px]'> 
               {!loading ? 'Send Message' : 'Sending...'} 
             </p>
           </button>
-        </div>)}
+        </form>)}
     </section>
   )
 }
