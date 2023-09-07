@@ -44,8 +44,25 @@
   width: 150px;
   height: 40px;
   background-color: #1E2D66;
-  margin-left: 20px;
   border-radius: 10px;
+
+  transition: all 0.3s ease;
+}
+
+/* Glow effect on hover */
+.button:hover {
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 0 5px rgba(30, 45, 102, 0.10), /* Inner glow */
+                0 0 10px rgba(30, 45, 102, 0.10), /* Middle glow */
+                0 0 20px rgba(30, 45, 102, 0.10), /* Middle glow */
+                0 0 30px rgba(30, 45, 102, 0.10), /* Middle glow */
+                0 0 40px rgba(30, 45, 102, 0.10), /* Middle glow */
+                0 0 50px rgba(30, 45, 102, 0.10); /* More outer glow */
+}
+
+.button:hover::before {
+    transform: translate(-50%, -50%) scale(1.5);
 }
 
 .text-bold{

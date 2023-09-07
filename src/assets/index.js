@@ -21,6 +21,7 @@ import photo9 from "./photo-9.png"
 import affordable from "./affordable.svg";
 import chemical from "./chemical.svg";
 import bug from "./bug.svg";
+import clock from "./clock.svg";
 import construction from "./construction.png"
 import residential from "./residential.png"
 import restaurant from "./restaurant.png"
@@ -38,5 +39,6 @@ export {
   affordable,
   bug,
   chemical,
+  clock,
   construction, residential, restaurant, industrial, government, commercial,
 }

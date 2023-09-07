@@ -16,7 +16,7 @@ const About = () => {
         <p> {content.about} </p>
       </div>
 
-      <button href='#about' className='button my-5 hover:bg-primary hover:text-dimWhite'>
+      <button className='button my-5'>
         <div className='text-cream font-bold text-[18px]'>
           <Link to={`/about`}>Read More</Link>
         </div>

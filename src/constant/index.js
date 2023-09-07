@@ -1,4 +1,4 @@
-import { affordable, bug, chemical, facebook, instagram, whatsappIcon, tiktok,
+import { affordable, bug, chemical, clock, facebook, instagram, whatsappIcon, tiktok,
          photo8, photo5, photo3, photo1,
          photo16, photo18, photo11, photo17, photo19, photo9,
          commercial, residential, construction, industrial, government, restaurant} from '../assets'
@@ -51,7 +51,7 @@ export const BulletContent = [
     id: 'fast-response',
     title: 'Fast Response',
     description: 'When pests strike, time is of the essence. With Titan Pest Control, you can count on our swift action and timely solutions, ensuring your peace of mind is quickly restored.',
-    logo: chemical,
+    logo: clock,
   },
   {
     id: 'in-house-entomologist',

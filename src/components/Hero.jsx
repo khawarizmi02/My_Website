@@ -42,7 +42,7 @@ const Hero = () => {
           <p>{content.summarize}</p>
         </div>
 
-        <button href='#contact-us' className='button mt-5 hover:bg-primary hover:text-dimWhite'>
+        <button href='#contact-us' className='button mt-5 ml-5'>
           <div className='text-cream text-[16px] font-bold'>
             <Link to={`/contact-us`}>Contact Us</Link>
           </div>
