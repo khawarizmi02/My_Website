@@ -32,8 +32,6 @@ const Info = ({ serviceId }) => {
 
   const filteredService = services.find( item => item.slug.current === serviceId) 
 
-  console.log('servicesMethod' in filteredService)
-
   return (
     <>
     <section className={`flex md:flex-row flex-col justify-evenly min-h-[375px] ${styles.paddingY}`}>
