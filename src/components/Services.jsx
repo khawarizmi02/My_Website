@@ -44,8 +44,8 @@ const Services = () => {
       </div>
       <div className="grid grid-cols-2 ss:grid-cols-3 sm:grid-cols-4 md:grid-cols-5 w-full feedback-container relative z-[1]">
         {services.map((item) => (
-          <div className={`flex flex-col items-center px-10 py-12 rounded-[55px]
-                  min-w-[170px] max-w-full mx-0 sm:mx-5 md:mx-10 my-5`}>
+          <div className={`flex flex-col items-center py-12 rounded-[55px]
+                  min-w-[170px] max-w-full mx-0 sm:mx-3 md:mx-5 my-5`}>
           
             <div className="relative w-[130px] h-[130px] xs:w-[147px] xs:h-[147px] hover:scale-105 transition-transform duration-200">
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
@@ -59,7 +59,7 @@ const Services = () => {
             <Link to={`/services/${item.slug.current}`}>
               <div className='flex items-center'>
                 <div 
-                  className={`font-poppins font-semibold text-black text-[20px] xs:text-[30px] 
+                  className={`font-poppins font-normal sm:font-bold text-black text-[20px] 
                               mt-5 capitalize text-center max-w-full`}> 
                   {item.name.replace("Services", "").trim()} </div>
               </div>
