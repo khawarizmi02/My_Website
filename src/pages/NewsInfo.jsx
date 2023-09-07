@@ -71,14 +71,19 @@ const NewsContent = ({ newsId }) => {
           </div>
 
           <div>
-            {filteredNews.subtopics.map((topic) => (
+            { 'subtopics' in filteredNews && filteredNews.subtopics.length > 0 ? (
+              filteredNews.subtopics.map((topic) => (
               <div className='flex flex-col pr-6 pb-6'>
                 <div className={`${styles.point} border-b-2 border-blackBlur pb-2`}>{topic.subtopicName}</div>
                 <div className='font-poppins text-black text-[20px] py-5'> 
                   <RenderBlockContent blocks={topic.subtopicDescription}/>
                 </div>
               </div>
-            ))}
+            ))) : (
+              <div className="flex justify-center items-center">
+                <p className={`${styles.paragraph2} text-center`}>No services available at the moment.</p>
+              </div>
+            )}
           </div>
         </div>
         <div className='flex flex-col p-3'>

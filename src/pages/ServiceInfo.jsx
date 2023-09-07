@@ -60,7 +60,7 @@ const Info = ({ serviceId }) => {
         </h1>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 feedback-container relative z-[1]">
-        { !'servicesMethod' in filteredService ? (
+        { 'servicesMethod' in filteredService && filteredService.servicesMethod.length > 0 ? (
          filteredService.servicesMethod.map((item) => (
         <div className={`flex flex-col justify-around items-center px-5 pb-3
                         min-w-[330px] max-w-[350px] bg-primaryBlur`}>
