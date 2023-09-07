@@ -32,6 +32,8 @@ const Info = ({ serviceId }) => {
 
   const filteredService = services.find( item => item.slug.current === serviceId) 
 
+  console.log('servicesMethod' in filteredService)
+
   return (
     <>
     <section className={`flex md:flex-row flex-col justify-evenly min-h-[375px] ${styles.paddingY}`}>
@@ -60,10 +62,11 @@ const Info = ({ serviceId }) => {
         </h1>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 feedback-container relative z-[1]">
-        {filteredService.servicesMethod.map((item) => (
-          <div className={`flex flex-col justify-around items-center px-5 pb-3
-                            min-w-[330px] max-w-[350px] bg-primaryBlur`}>
-      
+        { !'servicesMethod' in filteredService ? (
+         filteredService.servicesMethod.map((item) => (
+        <div className={`flex flex-col justify-around items-center px-5 pb-3
+                        min-w-[330px] max-w-[350px] bg-primaryBlur`}>
+
           <div className="relative min-w-[330px] max-w-[350px] h-[350px]">
             <img src={urlFor(item.methodImage).url()} className="h-full w-full object-cover object-center rounded-[2px]" />
           </div> 
@@ -72,8 +75,13 @@ const Info = ({ serviceId }) => {
             <div className={`${styles.point} mt-5 uppercase text-center max-w-[250px]`}> {item.methodName} </div> {/* Adjust width if necessary */}
             <div className={`${styles.paragraph2} text-center max-w-[250px]`}> {item.methodDescription} </div> {/* Adjust width if necessary */}
           </div>
-         </div>
-        ))}
+        </div>
+      ))
+      ) : (
+        <div className="flex justify-center items-center">
+          <p className={`${styles.paragraph2} text-center`}>No services available at the moment.</p>
+        </div>
+        )}
       </div>
     </section>
     </>
