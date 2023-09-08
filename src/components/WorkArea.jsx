@@ -13,10 +13,16 @@ const WorkArea = () => {
       </div>
       <div className="grid grid-cols-2 md:grid-cols-3  feedback-container relative z-[1]">
         {contents.map((item, index) => (
-          <div className={`flex flex-col center items-center px-10 py-12 rounded-[55px]
-                 w-[200px] h-[220px] sm:w-[330px] mx-0 sm:mx-5 md:mx-10 my-0 md:my-9
-                  ${index % 2 === 0 ? 'feedback-card-blue' : 'feedback-card-green'}`}>
+          <div className={`flex flex-col center relative items-center px-10 py-12 rounded-[55px]
+                 w-[200px] h-full sm:w-[330px] mx-0 sm:mx-5 md:mx-10 my-0 md:my-9`}>
           
+            <div className={`absolute top-[0%] left-[0%] w-full h-full z-[-2] animate-rotate-10s
+                  ${index % 2 === 0 ? 'feedback-card-blue' : 'feedback-card-green'}`}>
+            </div>
+            <div className={`absolute top-[0%] left-[0%] w-full h-full z-[-2] animate-rotate-23s animate-delay-1s 
+                  ${index % 2 === 0 ? 'feedback-card-blue' : 'feedback-card-green'}`}>
+            </div>
+            
             <div className="relative w-[100px] h-[100px] md:w-[176px] md:h-[176px] hover:scale-105 transition-transform duration-200">
               <div className="absolute top-[-5px] left-[-5px] w-[110px] h-[110px] md:w-[186px] md:h-[186px] rounded-full border-2 border-black"></div>
               <img src={item.image} alt={item.id} className="w-full h-full rounded-full" />
