@@ -18,6 +18,7 @@ import photo3 from "./photo-3.png"
 import photo5 from "./photo-5.png"
 import photo8 from "./photo-8.jpeg";
 import photo9 from "./photo-9.png"
+import value from "./value.jpeg"
 import affordable from "./affordable.svg";
 import chemical from "./chemical.svg";
 import bug from "./bug.svg";
@@ -28,17 +29,20 @@ import restaurant from "./restaurant.png"
 import government from "./government.png"
 import commercial from "./commercial.png"
 import industrial from "./industrial.png"
+import hotel from "./hotel.jpeg"
+import educational from "./educational.jpeg"
+import healthcare from "./healthcare.jpeg"
 
 export {
   menu,
   close,
   instagram, facebook, whatsapp1, whatsappIcon, tiktok,
   lowlogo,
-  logo1,
+  logo1, value,
   photo1, photo3, photo5, photo8,photo9,photo11,photo16,photo17,photo18,photo19,photo20,
   affordable,
   bug,
   chemical,
   clock,
-  construction, residential, restaurant, industrial, government, commercial,
+  construction, residential, restaurant, industrial, government, commercial, healthcare, educational, hotel,
 }
