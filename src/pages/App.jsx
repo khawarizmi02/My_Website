@@ -1,4 +1,5 @@
 import React from 'react';
+
 import styles from '../style';
 import '../index.css';
 import { Hero, Navbar, Footer, WhyUs, About,
@@ -9,7 +10,7 @@ function App() {
   return (
       <div className="bg-cream w-full overflow-hidden">
         <div className={`${styles.paddingX} ${styles.flexCenter} bg-cream`}>
-          <div className={`${styles.boxWidth} bg-black`}>
+          <div className={`${styles.boxWidth} border-b-[1px] border-b-primary`}>
             <Navbar />
           </div>
         </div>

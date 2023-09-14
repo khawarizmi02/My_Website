@@ -1,20 +1,15 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs';
-import { RxDotFilled } from 'react-icons/rx';
 
 import { Navbar, Footer, WorkArea, Whatsapp } from '../components'
 import styles from '../style'
 import { client, urlFor } from '../client';
-import { photo19 } from '../assets';
+import { photo19, value } from '../assets';
 
 const Info = () => {
   
   const [about, setAbout] = useState([]);
-  const [certificates, setCertificates] = useState([]);
   const [isLoading, setIsLoading] = useState(true); 
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [fadeIn, setFadeIn] = useState(true);
 
   useEffect(() => {
     const query = '*[_type == "about"]';
@@ -22,27 +17,10 @@ const Info = () => {
 
     client.fetch(query).then((data) => {
       setAbout(data);
-      setCertificates(data[0].certificates);
       setIsLoading(false);
     })
   }, [])
   
-  const prevSlide = () => {
-    const isFirstSlide = currentIndex === 0;
-    const newIndex = isFirstSlide ? certificates.length - 1 : currentIndex - 1;
-    setCurrentIndex(newIndex);
-  };
-
-  const nextSlide = () => {
-    const isLastSlide = currentIndex === certificates.length - 1;
-    const newIndex = isLastSlide ? 0 : currentIndex + 1;
-    setCurrentIndex(newIndex);
-  };
-
-  const goToSlide = (slideIndex) => {
-    setCurrentIndex(slideIndex);
-  };
-
   if (isLoading) {
     return <div 
     className='flex flex-col justify-center center 
@@ -51,11 +29,6 @@ const Info = () => {
     Loading...
     </div>;  // Render a loading message while data is being fetched
   }
-
-  if (!certificates[currentIndex]) return null;
-
-  const currentCertificate = certificates[currentIndex];
-  const imageSrc = currentCertificate && currentCertificate.certificateImage ? urlFor(currentCertificate.certificateImage).url() : null;
 
   return (
     <>
@@ -82,40 +55,29 @@ const Info = () => {
         </div>
       </section>
 
+      <section className={`${styles.paddingY} grid grid-cols-1 md:grid-cols-[70%,30%]`}>
+        <div className='flex flex-col  w-full px-6'>
+          <h1 className={`${styles.heading3}`}>Value</h1>
+          <p className={`${styles.paragraph2}`}> {about[0].value} </p>
+        </div>
+        <div>
+          <img src={value} alt="value" className='w-full h-full rounded-[10px] object-cover'/>
+        </div>
+      </section>
+
       <WorkArea />
 
       <section id="about" className={`${styles.paddingY} ${styles.flexCenter} my-5 bg-primaryBlur flex-col relative group relative `}>
-        <h1 className={`${styles.heading1} text-center`}>Certificates</h1>
-              
-        <div>
-          <div className='flex flex-col items-center my-5'>
-            <img src={imageSrc} alt={certificates[currentIndex].name} className={`max-h-[1000px] transition 
-                    duration-1000 ${fadeIn ? 'opacity-100' : 'opacity-0'}`} />
-          </div>
-            
-          {/* Left Arrow */}
-          <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl 
-                    rounded-full p-2 bg-black/20 text-white cursor-pointer'>
-          <BsChevronCompactLeft onClick={prevSlide} size={30} />
-          </div>
-          {/* Right Arrow */}
-          <div className='hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl 
-                    rounded-full p-2 bg-black/20 text-white cursor-pointer'>
-          <BsChevronCompactRight onClick={nextSlide} size={30} />
-          </div>
-
-          <div className='flex top-4 justify-center py-2'>
-            {certificates.map((item, index) => (
-              <div
-                    key={index}
-                onClick={() => goToSlide(index)}
-                className='text-2xl cursor-pointer'
-               >
-                <RxDotFilled />
-              </div>
-            ))}
-          </div>
-        </div>
+        <h1 className={`${styles.heading1} text-center`}>Accreditions & Certifications</h1>
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 py-3'>
+          {about[0].certificates.map((item) => (
+            <div className='flex flex-col py-3 px-6'>
+              <img src={urlFor(item.certificateImage).url()} className='w-full h-full object-cover'/>
+              <h1 className={`${styles.point}`}> {item.certificateName} </h1>
+              <p className={`${styles.paragraph2}`}> {item.certificateDescription} </p>
+            </div>
+          ))}
+        </div>     
       </section>
     </>
   )
@@ -123,11 +85,10 @@ const Info = () => {
 
 const About = () => {
 
-
   return (
       <div className="bg-cream w-full overflow-hidden">
         <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-          <div className={`${styles.boxWidth}`}>
+          <div className={`${styles.boxWidth} border-b-[1px] border-b-primary`}>
             <Navbar />
           </div>
         </div>

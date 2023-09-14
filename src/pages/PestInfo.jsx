@@ -36,7 +36,7 @@ const Info = ({ pestId }) => {
 
   return (
     <>
-      <section className={`${styles.flexStart} pb-3 relative`}>
+      <section className={`${styles.flexStart} py-3 relative`}>
         <div className='flex flex-col items-center justify-center'>
           <img src={urlFor(filteredPest.pestImage).url()} className='w-full max-h-[450px] object-cover' />
           <div className='font-poppins font-bold text-black text-center text-[45px] capitalize'>
@@ -97,7 +97,7 @@ const PestInfo = () => {
   return (
     <div className="bg-cream w-full overflow-hidden">
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-        <div className={`${styles.boxWidth}`}>
+        <div className={`${styles.boxWidth} border-b-[1px] border-b-primary`}>
           <Navbar />
         </div>
       </div>

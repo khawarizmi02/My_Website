@@ -113,7 +113,7 @@ const NewsInfo = () => {
   return (
     <div className="bg-cream w-full overflow-hidden">
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-        <div className={`${styles.boxWidth}`}>
+        <div className={`${styles.boxWidth} border-b-[1px] border-b-primary`}>
           <Navbar />
         </div>
       </div>
