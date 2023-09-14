@@ -12,7 +12,7 @@ const Footer = () => {
   const exploreLink = footerLinks[2];
 
   return (
-    <section className={`${styles.flexCenter} ${styles.paddingY} px-5 flex-col bg-black rounded`}>
+    <section className={`${styles.flexCenter} ${styles.paddingY} px-5 flex-col bg-primary rounded`}>
       <div className={`${styles.flexStart} md:flex-row flex-col mb-8 w-full`}>
         <div className="flex-[1] flex flex-col justify-start mr-10">
           <img

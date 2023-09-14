@@ -1,7 +1,7 @@
 import { affordable, bug, chemical, clock, facebook, instagram, whatsappIcon, tiktok,
          photo8, photo5, photo3, photo1,
          photo16, photo18, photo11, photo17, photo19, photo9,
-         commercial, residential, construction, industrial, government, restaurant} from '../assets'
+         commercial, residential, construction, industrial, government, restaurant, educational, hotel, healthcare} from '../assets'
 
 export const navLinks = [
   {
@@ -56,7 +56,7 @@ export const BulletContent = [
   {
     id: 'in-house-entomologist',
     title: 'In-House Entomologist',
-    description: "Titan Pest Control doesn't just treat pests; we understand them, ensuring more effective and informed solutions.",
+    description: "Titan Pest Control doesn't just treat pests, we understand them, ensuring more effective and informed solutions.",
     logo: chemical,
   },
 ]
@@ -136,6 +136,21 @@ export const WorkAreaContent = [
     id: "restaurant",
     title: "food & beverage",
     image: restaurant,
+  },
+  {
+    id: "educational",
+    title: "educational",
+    image: educational,
+  },
+  {
+    id: "hotel",
+    title: "hotel / resort",
+    image: hotel,
+  },
+  {
+    id: "healthcare",
+    title: "healthcare",
+    image: healthcare,
   },
 ]
 

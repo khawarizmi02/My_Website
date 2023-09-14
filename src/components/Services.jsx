@@ -38,11 +38,11 @@ const Services = () => {
         <p className={`${styles.paragraph3} max-w-[967px] mt-5`}>
           We deal with all kinds of pest that interfere with your peace a comfort of livings.
         </p>
-        <p className={`${styles.paragraph4} max-w-[967px]`}>
+        <p className={`${styles.paragraph3} max-w-[967px]`}>
           Here are the list of services the we can provide:
         </p>
       </div>
-      <div className="grid grid-cols-2 ss:grid-cols-3 sm:grid-cols-4 md:grid-cols-5 w-full feedback-container relative z-[1]">
+      <div className="grid grid-cols-2 ss:grid-cols-3 sm:grid-cols-4 w-full feedback-container relative z-[1]">
         {services.map((item) => (
           <div className={`flex flex-col items-center py-12 rounded-[55px]
                   min-w-[170px] max-w-full mx-0 sm:mx-3 md:mx-5 my-5`}>

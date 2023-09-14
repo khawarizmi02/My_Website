@@ -1,41 +1,36 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 import { logo1, menu, close } from '../assets'
 import { navLinks } from '../constant'
 
 const Navbar = () => {
-  const [active, setActive] = useState("Home");
+  const [pageLocation, setPageLocation] = useState("")
   const [toggle, setToggle] = useState(false);
+
+  const location = useLocation();
+  
+  useEffect(() => {
+    const segments = location.pathname.split('/').filter(Boolean);
+    setPageLocation(segments[0] || "");  // If segments[0] is undefined, it will default to "".
+  }, [location.pathname]); 
   
   return (
-    <nav className="bg-cream w-full flex py-4 justify-between items-center">
-
+    <nav className="bg-cream w-full flex py-4 justify-between items-center rounded-[5px]">
       <Link to={`/`}>
-        <img src={logo1} alt="hoobank" className="w-[172px] h-[74px]" />
+        <img src={logo1} alt="logo1" className="w-[220px] h-[95px] ml-7" />
       </Link>
       
       <ul className='list-none md:flex hidden justify-end items-center flex-1'>
         {navLinks.map((nav, index) => (
-          nav.id !== 'contact-us'  // Example condition
-          ? (
             <li 
               key={nav.id}
-              className={`font-poppins font-normal cursor-pointer text-[16px] ${
-              active === nav.title ? "text-black" : "text-black"
-              } ${index === navLinks.length - 1 ? "mr-0" : "mr-7"}`}
-              onClick={() => setActive(nav.title)}
+              className={`font-poppins font-normal cursor-pointer text-[16px] text-black ${
+              pageLocation === nav.id ? "border-b-[2px] border-b-primary" : ""
+              } ${index === navLinks.length ? "mr-0" : "mr-7"}`}
             >
             <Link to={`/${nav.id}`}>{nav.title}</Link>
             </li> 
-        )
-        : <li>
-            <button type="button" className="button">
-              <div className="text-[16px] text-cream font-bold">
-                <Link to={`/${nav.id}`}>{nav.title}</Link>
-              </div>
-            </button>
-          </li>
         ))}
 
       </ul>
