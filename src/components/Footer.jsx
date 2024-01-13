@@ -12,7 +12,7 @@ const Footer = () => {
   const exploreLink = footerLinks[2];
 
   return (
-    <section className={`${styles.flexCenter} ${styles.paddingY} px-5 flex-col bg-primary rounded`}>
+    <section className={`${styles.flexCenter} ${styles.paddingX} py-3 flex-col bg-primaryBlur rounded`}>
       <div className={`${styles.flexStart} md:flex-row flex-col mb-8 w-full`}>
         <div className="flex-[1] flex flex-col justify-start mr-10">
           <img
@@ -23,9 +23,9 @@ const Footer = () => {
         </div>
         
         <div className="flex-[1.5] w-full flex flex-row justify-around flex-wrap md:mt-0 mt-10">
-          <div className='text-cream font-poppins font-normal text-center sm:text-left'>
+          <div className='text-black font-poppins font-extrabold text-center sm:text-left'>
             <div> {address.title} </div>
-            <div className='font-light'>
+            <div className='font-normal'>
               <div> {address.name} {address.companyNum} </div>
               <div className='max-w-[330px]'> {address.address} </div>
               <div> {address.poscode} {address.city} </div>
@@ -33,18 +33,18 @@ const Footer = () => {
             </div>
             
             <div className='pt-6'> {contactInfo.title}  </div>
-            <div className='font-light'> {contactInfo.contactNum}  </div>
-            <div className='font-light'> {contactInfo.email}  </div>
+            <div className='font-normal'> {contactInfo.contactNum}  </div>
+            <div className='font-normal'> {contactInfo.email}  </div>
           </div>
 
           <div>
-            <div className='text-cream font-poppins font-normal pt-6 text-center sm:text-left'> {exploreLink.title} </div>
+            <div className='text-black font-poppins font-extrabold pt-6 text-center sm:text-left'> {exploreLink.title} </div>
             <ul className="list-none mt-4">
               { exploreLink.links.map((link, index) => (
                 <li
                   key={link.name}
-                  className={`font-poppins font-light text-[16px] leading-[24px] text-cream 
-                    hover:text-secondary cursor-pointer text-center sm:text-left
+                  className={`font-poppins font-medium text-[16px] leading-[24px] text-black 
+                    hover:text-primary cursor-pointer text-center sm:text-left
                     ${index !== exploreLink.links.length - 1 ? "mb-4" : "mb-0"}`}
                 > <Link to={`/${link.link}`}>  {link.name} </Link> </li>
               ))}
@@ -53,13 +53,13 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="w-full flex justify-between items-center md:flex-row flex-col pt-6 border-t-[1px] border-t-cream px-4">
-        <p className="font-poppins font-light text-center text-[18px] leading-[27px] text-cream">
+      <div className="w-full flex justify-between items-center md:flex-row flex-col pt-6 border-t-[1px] border-t-black px-4">
+        <p className="font-poppins font-normal text-center text-[18px] leading-[27px] text-black">
           Copyright Ⓒ 2023 Titan Pest Solution. All Rights Reserved.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center md:mt-0 mt-3">
-          <div><p className={`${styles.paragraph} text-center px-4`}> Hang with us on these social sites </p></div>
+          <div><p className="font-poppins font-normal text-black text-[18px] pr-2"> Hang with us on these social sites </p></div>
           <div className='grid grid-cols-4 pt-3 sm:pt-0'>
             {socialMedia.map((social, index) => (
               <img

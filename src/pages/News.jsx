@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 
-import { client, urlFor } from '../client'
+import { client, urlFor, RenderBlockContent } from '../client'
 import styles from '../style'
 import { Navbar, Footer, Whatsapp } from '../components'
 
@@ -78,13 +78,34 @@ const NewList = () => {
 }
 
 const Intro = () => {
+
+	const [intro, setIntro] = useState([]);
+	const [isLoading, setIsLoading] = useState(true);
+
+	useEffect(() => {
+		const query = '*[_type == "newsIntro"]';
+		setIsLoading(true);
+
+		client.fetch(query).then((data) => {
+			setIntro(data);
+			setIsLoading(false);
+		})
+	}, [])
+
+	if (isLoading) {
+		return <div
+			className='flex flex-col justify-center center
+			font-poppins font-[20px] text-black text-center'
+		>
+			Loading...
+		</div>;  // Render a loading message while data is being fetched
+	}
+
   return (
     <section className={`${styles.flexCenter} flex-col relative `}>
       <h1 className='font-poppins font-extrabold text-[40px] text-black pb-3'>News & Tips</h1>
       <p className={`${styles.paragraph3} max-w-[70%]`}>
-        Dealing with pest can be a frustrating and time-consuming experience for homeowners and businesses alike.
-        Read on as we provide you with useful tips and information to help you identify, prevent, and control pests
-        in your home or business.
+				<RenderBlockContent blocks={intro[0].introduction} />
       </p>
     </section>
   )

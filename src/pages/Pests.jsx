@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 
 import styles from '../style'
 import { Navbar, Footer, Whatsapp } from '../components'
-import { urlFor, client } from '../client'
+import { urlFor, client, RenderBlockContent } from '../client'
 import { photo20 } from '../assets'
 
 const PestList = () => {
@@ -55,23 +55,44 @@ const PestList = () => {
 }
 
 const Intro = () => {
+
+	const [intro, setIntro] = useState([]);
+	const [isLoading, setIsLoading] = useState(true);
+
+	useEffect(() => {
+		const query = '*[_type == "libraryIntro"]';
+		setIsLoading(true);
+
+		client.fetch(query).then((data) => {
+			setIntro(data);
+			setIsLoading(false);
+		})
+	}, [])
+
+	if (isLoading) {
+		return <div
+			className='flex flex-col justify-center center
+			font-poppins font-[20px] text-black text-center'
+		>
+			Loading...
+		</div>;  // Render a loading message while data is being fetched
+	}
+
   return (
     <section className={`${styles.paddingX} pb-3`}>
       <div className='grid grid-cols-1 md:grid-cols-[40%,60%] gap-6'>
         <div className='text-center px-6 py-3 w-full'> 
-          <img src={photo20} className='w-full h-[300px] xs:h-[500px] sm:h-[800px] md:h-full object-cover object-top rounded-[10px]'/>
+          <img src={urlFor(intro[0].image).url()} 
+						className='w-full h-[300px] xs:h-[500px] sm:h-[800px] 
+						md:h-full object-cover object-top rounded-[10px]'
+					/>
         </div>
         <div className='flex flex-col w-full justify-center'> 
           <div className={`${styles.heading1} capitalize`}>
-            Specialised IPM Solutions
+						{intro[0].title}
           </div>
           <div className={`${styles.paragraph2} pt-3`}>
-            Evolution over millions of years has made pests adaptable to challenging circumstances. 
-            Some pests are able to survive and multiply in threatening environments and can even survive indiscriminate chemical spraying.
-            This is where comprehensive solutions for pest management in Malaysia come in.
-          </div>
-          <div className={`${styles.paragraph2} pt-3`}>
-            Our Integrated Pest Management plan begins with preliminary inspections of the affected area to identify the pest species and conceptualising plans to exploit their weaknesses, in addition to establishing the food sources used to sustain the infestation. After surveying the pest problem, we formulate a strategy for customised IPM pest control services and strike with full force to disorientate the pests and ensure they are unable to propagate. Follow-up inspections ensure that all remaining stragglers are eliminated.
+						<RenderBlockContent blocks={intro[0].introduction} />
           </div>
         </div>
       </div>

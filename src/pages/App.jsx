@@ -28,11 +28,11 @@ function App() {
             <WorkArea />
             <Services />
             <Request />
-            <Footer />
           </div>
         </div>
 
-      <Whatsapp />
+      	<Footer />
+      	<Whatsapp />
       </div>
   );
 }

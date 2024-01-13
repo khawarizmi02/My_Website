@@ -51,7 +51,7 @@ const Services = () => {
               <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 
                               w-[150px] h-[150px] xs:w-[170px] xs:h-[170px] z-[-1] ">
               </div>
-              <Link to={`/services/${item.slug.current}-services`}>
+              <Link to={`/services/${item.slug.current}`}>
                 <img src={urlFor(item.image).url()} alt={item.slug.current} className="w-full h-full rounded-full object-cover z-10" />
               </Link>
             </div> 

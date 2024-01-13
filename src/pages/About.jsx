@@ -3,8 +3,7 @@ import { useState, useEffect } from 'react'
 
 import { Navbar, Footer, WorkArea, Whatsapp } from '../components'
 import styles from '../style'
-import { client, urlFor } from '../client';
-import { photo19, value } from '../assets';
+import { client, urlFor, RenderBlockContent } from '../client';
 
 const Info = () => {
   
@@ -35,7 +34,7 @@ const Info = () => {
       <section id="about" className={`${styles.paddingY} ${styles.flexCenter} flex-col relative `}>
         <div className='grid grid-cols-1 md:grid-cols-[40%,60%]'>
           <div className='px-3 py-3'>
-            <img src={photo19} alt='photo19' className='w-full h-full rounded-[10px] object-cover'/>
+            <img src={urlFor(about[0].introImage).url()} alt='photo19' className='w-full h-full rounded-[10px] object-cover'/>
           </div>
           <div className='flex flex-col w-full px-6'>
             <h1 className={`${styles.heading3} text-center`}>About Us</h1>
@@ -58,10 +57,11 @@ const Info = () => {
       <section className={`${styles.paddingY} grid grid-cols-1 md:grid-cols-[70%,30%]`}>
         <div className='flex flex-col  w-full px-6'>
           <h1 className={`${styles.heading3}`}>Value</h1>
-          <p className={`${styles.paragraph2}`}> {about[0].value} </p>
+          {/* <p className={`${styles.paragraph2}`}> {about[0].value} </p> */}
+					<RenderBlockContent blocks={about[0].value} />
         </div>
         <div>
-          <img src={value} alt="value" className='w-full h-full rounded-[10px] object-cover'/>
+          <img src={urlFor(about[0].image).url()} alt="value" className='w-full h-full rounded-[10px] object-cover'/>
         </div>
       </section>
 
