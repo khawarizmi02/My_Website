@@ -55,7 +55,7 @@ const Testimonial = () => {
   const imageSrc =
     currentTestimonial && currentTestimonial.image
       ? urlFor(currentTestimonial.image).url()
-      : null;
+      : undefined;
 
   return (
     <section
