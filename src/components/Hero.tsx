@@ -72,7 +72,7 @@ const Hero = () => {
         <div className="flex flex-row justify-between items-center w-full">
           <h1
             className="flex-1 font-poppins font-bold ss:text-[72px] text-[52px] capitalize
-                        text-primary ss:leading-[100.8px] leading-[75px] max-w-[1000px]"
+                        text-[#1E2D66] ss:leading-[100.8px] leading-[75px] max-w-[1000px]"
           >
             {data.tagLine}
           </h1>
