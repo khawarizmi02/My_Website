@@ -123,7 +123,7 @@ const PestInfo = () => {
   return (
     <div className="bg-cream w-full overflow-hidden">
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-        <div className={`${styles.boxWidth} border-b-[1px] border-b-primary`}>
+        <div className={`${styles.boxWidth} border-b-[1px] border-b-mainBlue`}>
           <Navbar />
         </div>
       </div>

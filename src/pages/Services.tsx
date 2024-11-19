@@ -21,7 +21,7 @@ const Introduction = ({ seviceIntro }: { seviceIntro: ServiceIntro }) => {
       >
         <h1
           className="flex-1 font-poppins font-bold ss:text-[72px] text-[52px] 
-                        text-primary ss:leading-[100.8px] leading-[75px] max-w-[1000px]"
+                        text-mainBlue ss:leading-[100.8px] leading-[75px] max-w-[1000px]"
         >
           {seviceIntro.title}
         </h1>
@@ -70,7 +70,7 @@ const Services = () => {
   return (
     <div className="bg-cream w-full overflow-hidden">
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-        <div className={`${styles.boxWidth} border-b-[1px] border-b-primary`}>
+        <div className={`${styles.boxWidth} border-b-[1px] border-b-mainBlue`}>
           <Navbar />
         </div>
       </div>

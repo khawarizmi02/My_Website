@@ -32,7 +32,7 @@ function App() {
         <div className={`${styles.boxWidth}`}>
           <Media />
           <WhyUs />
-          <About />
+          {/* <About /> */}
           <WorkArea />
           <Services />
           <Request />

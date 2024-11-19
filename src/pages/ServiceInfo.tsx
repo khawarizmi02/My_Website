@@ -45,8 +45,8 @@ const Info = ({ serviceId }: { serviceId: string }) => {
               className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-10 px-6`}
             >
               <h1
-                className="flex-1 font-poppins font-bold text-primary ss:text-[72px] text-[52px] capitalize
-                        text-primary ss:leading-[100.8px] leading-[75px] max-w-[1000px]"
+                className="flex-1 font-poppins font-bold text-mainBlue ss:text-[72px] text-[52px] capitalize
+                        text-mainBlue ss:leading-[100.8px] leading-[75px] max-w-[1000px]"
               >
                 {filteredService.name}
               </h1>
@@ -127,7 +127,7 @@ const ServiceInfo = () => {
   return (
     <div className="bg-cream w-full overflow-hidden">
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-        <div className={`${styles.boxWidth} border-b-[1px] border-b-primary`}>
+        <div className={`${styles.boxWidth} border-b-[1px] border-b-mainBlue`}>
           <Navbar />
         </div>
       </div>

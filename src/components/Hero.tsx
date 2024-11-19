@@ -51,7 +51,7 @@ const Hero = () => {
         backgroundRepeat: "no-repeat",
         position: "relative",
       }}
-      className={`flex md:flex-row flex-col justify-evenly min-h-[375px] ${styles.paddingY}`}
+      className={`flex md:flex-row flex-col justify-evenly min-h-[375px] ${styles.paddingY} relative shadow-lg`}
       id="hero"
     >
       <div
@@ -72,7 +72,7 @@ const Hero = () => {
         <div className="flex flex-row justify-between items-center w-full">
           <h1
             className="flex-1 font-poppins font-bold ss:text-[72px] text-[52px] capitalize
-                        text-[#1E2D66] ss:leading-[100.8px] leading-[75px] max-w-[1000px]"
+                        text-mainBlue ss:leading-[100.8px] leading-[75px] max-w-[1000px]"
           >
             {data.tagLine}
           </h1>
@@ -88,6 +88,7 @@ const Hero = () => {
           </div>
         </button>
       </div>
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-black to-transparent"></div>
     </section>
   );
 };

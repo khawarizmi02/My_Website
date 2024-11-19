@@ -19,6 +19,7 @@ export default {
 					foreground: 'hsl(var(--accent-foreground))'
 				},
 				black: '#3c3c3c',
+				mainBlue: '#1E2D66',
 				cream: '#FEFEFE',
 				tpCream: 'rgba(244, 237, 215, 0.87)',
 				primaryBlur: 'rgba(30, 45, 102, 0.10)',

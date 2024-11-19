@@ -39,7 +39,7 @@ const Navbar = () => {
           <li
             key={nav.id}
             className={`font-poppins font-normal cursor-pointer text-[16px] text-black ${
-              pageLocation === nav.id ? "border-b-[2px] border-b-primary" : ""
+              pageLocation === nav.id ? "border-b-[2px] border-b-mainBlue" : ""
             } ${index === navLinks.length ? "mr-0" : "mr-7"}`}
           >
             <Link to={`/${nav.id}`}>{nav.title}</Link>
@@ -58,7 +58,7 @@ const Navbar = () => {
         <div
           className={`${
             !toggle ? "hidden" : "flex"
-          } p-6 bg-primary absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar z-[11]`}
+          } p-6 bg-mainBlue absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-xl sidebar z-[11]`}
         >
           <ul className="list-none flex justify-end items-start flex-1 flex-col">
             {navLinks.map((nav, index) => (

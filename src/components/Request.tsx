@@ -55,7 +55,7 @@ const Request = () => {
       className={`${styles.paddingY} ${styles.flexCenter} flex-col relative`}
     >
       <div className="center">
-        <h1 className="text-center text-primary text-[50px] uppercase font-extrabold leading-relaxed">
+        <h1 className="text-center text-mainBlue text-[50px] uppercase font-extrabold leading-relaxed">
           request a free quote
         </h1>
 

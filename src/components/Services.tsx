@@ -38,7 +38,7 @@ const Services = () => {
       className={`${styles.paddingY} ${styles.flexCenter} flex-col relative `}
     >
       <div className="center">
-        <h1 className="text-center text-primary text-[50px] font-extrabold leading-relaxed">
+        <h1 className="text-center text-mainBlue text-[50px] font-extrabold leading-relaxed">
           Our Services
         </h1>
         <p className={`${styles.paragraph3} max-w-[967px] mt-5`}>

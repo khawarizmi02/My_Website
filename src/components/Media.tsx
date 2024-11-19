@@ -1,7 +1,17 @@
 import { useState, useEffect, useRef } from "react";
 
-import { client } from "../client";
+import { client, urlFor } from "../client";
 import styles from "../style";
+
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const Media = () => {
   const [data, setData] = useState<Home[]>([]);
@@ -19,7 +29,18 @@ const Media = () => {
     });
   }, []);
 
-  console.log(data);
+  const getAssetUrl = (data: Home) => {
+    if (data.asset._type === "reference") {
+      const ref = data.asset._ref;
+      const [fileType, fileId, fileExtension] = ref.split("-");
+      if (fileType === "file") {
+        return `https://cdn.sanity.io/files/${client.config().projectId}/${
+          client.config().dataset
+        }/${fileId}.${fileExtension}`;
+      }
+    }
+    return urlFor(data.asset).url();
+  };
 
   if (isLoading) {
     return (
@@ -42,27 +63,46 @@ const Media = () => {
           Media
         </h1>
       </div>
-      {/* <div className="grid grid-cols-1 sm:grid-cols-2 items-center w-full feedback-container-whyus relative z-[1]">
-        {items.map((item) => (
-          <div className="flex justify-around items-center flex-col px-10 py-12 rounded-[55px] 
-                          min-w-[250px]  max-w-full md:mr-10 md:ml-10 sm:mr-5 sm:ml-5 mr-0 my-5 feedback-card-whyus">
-          
-            <img src={item.logo} alt={item.id} className="w-[80px] h-[80px]" />
-            <div className='flex items-center'>
-              <div className={`${styles.point} text-center`}> {item.title} </div>
-            </div>
-
-            <div className='flex items-center'>
-              <p className={`${styles.paragraph2} max-w-[450px] md:max-w-[600px] text-center`}> {item.description} </p>       
-            </div>
-          </div>
-        ))}
-      </div> */}
+      <Carousel className="w-full px-10 relative">
+        <CarouselContent>
+          {data.map((item, index) => (
+            <CarouselItem key={index} className="w-full">
+              {item._type === "image" && (
+                <AspectRatio ratio={16 / 9} className="w-full">
+                  <img
+                    src={getAssetUrl(item)}
+                    alt={item.asset._ref}
+                    className="w-full h-auto"
+                  />
+                </AspectRatio>
+              )}
+              {item._type === "file" && (
+                <AspectRatio ratio={16 / 9} className="w-full">
+                  <video
+                    controls
+                    src={getAssetUrl(item)}
+                    typeof="video/mp4"
+                    className="w-full h-auto"
+                  />
+                </AspectRatio>
+              )}
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious className="absolute left-0 top-1/2 transform -translate-y-1/2 z-10" />
+        <CarouselNext className="absolute right-0 top-1/2 transform -translate-y-1/2 z-10" />
+      </Carousel>
     </section>
   );
 };
 
 interface Home {
+  asset: {
+    _type: string;
+    _key: string;
+    _ref: string;
+  };
+  _type: string;
   // tagLine: string;
   // heroText: string;
   // heroImage: {
@@ -71,9 +111,10 @@ interface Home {
   //   };
   // };
   media: {
-    _type: "image" | "file";
+    _type: string;
     asset: {
       _ref: string;
+      _type: string;
     };
   }[];
   // whyUs: {

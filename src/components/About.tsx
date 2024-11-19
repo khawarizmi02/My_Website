@@ -14,7 +14,7 @@ const About = () => {
       className={`${styles.paddingY} ${styles.flexCenter} bg-primaryBlur flex-col relative `}
     >
       <div className="center">
-        <h1 className="text-center text-primary text-[50px] font-extrabold leading-relaxed">
+        <h1 className="text-center text-mainBlue text-[50px] font-extrabold leading-relaxed">
           About Us
         </h1>
       </div>
@@ -30,7 +30,7 @@ const About = () => {
       </button>
 
       <div className="center pt-3">
-        <h1 className="text-center text-primary text-[50px] font-extrabold leading-relaxed">
+        <h1 className="text-center text-mainBlue text-[50px] font-extrabold leading-relaxed">
           YOUR RELIABLE PEST CONTROL OPERATOR
         </h1>
       </div>

@@ -61,7 +61,7 @@ const Footer = () => {
                   <li
                     key={link.name}
                     className={`font-poppins font-medium text-[16px] leading-[24px] text-black 
-                    hover:text-primary cursor-pointer text-center sm:text-left
+                    hover:text-mainBlue cursor-pointer text-center sm:text-left
                     ${
                       index !== exploreLink.links.length - 1 ? "mb-4" : "mb-0"
                     }`}
