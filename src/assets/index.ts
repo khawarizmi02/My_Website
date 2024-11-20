@@ -32,11 +32,9 @@ import industrial from "./industrial.png";
 import hotel from "./hotel.jpeg";
 import educational from "./educational.jpeg";
 import healthcare from "./healthcare.jpeg";
-import testvideo from "./test-vids.mp4";
 
 export {
   menu,
-  testvideo,
   close,
   instagram,
   facebook,

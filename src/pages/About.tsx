@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-import { Navbar, Footer, WorkArea, Whatsapp } from "../components";
+import { Navbar, Footer, WorkArea, Whatsapp, Values } from "../components";
 import styles from "../style";
 import { client, urlFor, RenderBlockContent } from "../client";
 
@@ -87,6 +87,7 @@ const Info = () => {
         </div>
       </section>
 
+      <Values />
       <WorkArea />
 
       <section

@@ -7,8 +7,10 @@ import WorkArea from "./WorkArea";
 import Services from "./Services";
 import Testimonial from "./Testimonial";
 import Request from "./Request";
+import RequestForm from "./RequestForm";
 import Whatsapp from "./Whatsapp";
 import Media from "./Media";
+import Values from "./Values";
 
 export {
   Hero,
@@ -21,5 +23,7 @@ export {
   Services,
   Testimonial,
   Request,
+  RequestForm,
   Whatsapp,
+  Values,
 };

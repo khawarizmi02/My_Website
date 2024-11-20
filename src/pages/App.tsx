@@ -6,9 +6,10 @@ import {
   Footer,
   Media,
   WhyUs,
-  About,
+  // About,
   WorkArea,
-  Request,
+  // Request,
+  RequestForm,
   Services,
   Whatsapp,
 } from "../components";
@@ -35,7 +36,8 @@ function App() {
           {/* <About /> */}
           <WorkArea />
           <Services />
-          <Request />
+          {/* <Request /> */}
+          <RequestForm />
         </div>
       </div>
 
