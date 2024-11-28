@@ -145,10 +145,10 @@ const News = () => {
         <div className={`${styles.boxWidth}`}>
           <Intro />
           <NewList />
-          <Footer />
         </div>
       </div>
 
+      <Footer />
       <Whatsapp />
     </div>
   );

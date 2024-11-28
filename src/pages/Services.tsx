@@ -79,10 +79,10 @@ const Services = () => {
           <Introduction seviceIntro={intro[0]} />
           <ServiceComp />
           <Request />
-          <Footer />
         </div>
       </div>
 
+      <Footer />
       <Whatsapp />
     </div>
   );

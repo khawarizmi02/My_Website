@@ -46,7 +46,7 @@ const Info = ({ serviceId }: { serviceId: string }) => {
             >
               <h1
                 className="flex-1 font-poppins font-bold text-mainBlue ss:text-[72px] text-[52px] capitalize
-                        text-mainBlue ss:leading-[100.8px] leading-[75px] max-w-[1000px]"
+                         ss:leading-[100.8px] leading-[75px] max-w-[1000px]"
               >
                 {filteredService.name}
               </h1>
@@ -135,10 +135,10 @@ const ServiceInfo = () => {
         <div className={`${styles.boxWidth}`}>
           <Info serviceId={serviceId ?? ""} />
           <Request />
-          <Footer />
         </div>
       </div>
 
+      <Footer />
       <Whatsapp />
     </div>
   );

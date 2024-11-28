@@ -12,10 +12,10 @@ const Contact = () => {
       <div className={`bg-cream ${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
           <Request />
-          <Footer />
         </div>
       </div>
 
+      <Footer />
       <Whatsapp />
     </div>
   );

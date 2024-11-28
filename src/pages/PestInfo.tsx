@@ -130,10 +130,10 @@ const PestInfo = () => {
       <div className={`bg-cream ${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
           <Info pestId={pestId ?? ""} />
-          <Footer />
         </div>
       </div>
 
+      <Footer />
       <Whatsapp />
     </div>
   );

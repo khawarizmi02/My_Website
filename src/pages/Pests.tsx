@@ -123,10 +123,10 @@ const Pests = () => {
         <div className={`${styles.boxWidth}`}>
           <Intro />
           <PestList />
-          <Footer />
         </div>
       </div>
 
+      <Footer />
       <Whatsapp />
     </div>
   );
