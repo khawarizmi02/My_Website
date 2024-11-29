@@ -5,9 +5,9 @@ import styles from "../style";
 import {
   Navbar,
   Footer,
-  Request,
   Whatsapp,
   Services as ServiceComp,
+  RequestForm,
 } from "../components";
 
 const Introduction = ({ seviceIntro }: { seviceIntro: ServiceIntro }) => {
@@ -78,7 +78,8 @@ const Services = () => {
         <div className={`${styles.boxWidth}`}>
           <Introduction seviceIntro={intro[0]} />
           <ServiceComp />
-          <Request />
+          {/* <Request /> */}
+          <RequestForm />
         </div>
       </div>
 

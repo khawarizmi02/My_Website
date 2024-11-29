@@ -2,7 +2,7 @@ import { useState, useEffect, ReactNode } from "react";
 import { useParams } from "react-router-dom";
 
 import styles from "../style";
-import { Navbar, Footer, Request, Whatsapp } from "../components";
+import { Navbar, Footer, Whatsapp, RequestForm } from "../components";
 import { urlFor, client } from "../client";
 
 const Info = ({ serviceId }: { serviceId: string }) => {
@@ -134,7 +134,8 @@ const ServiceInfo = () => {
       <div className={`bg-cream ${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
           <Info serviceId={serviceId ?? ""} />
-          <Request />
+          {/* <Request /> */}
+          <RequestForm />
         </div>
       </div>
 

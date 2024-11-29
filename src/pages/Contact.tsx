@@ -1,5 +1,5 @@
 import styles from "../style";
-import { Navbar, Footer, Request, Whatsapp } from "../components";
+import { Navbar, Footer, Request, Whatsapp, RequestForm } from "../components";
 
 const Contact = () => {
   return (
@@ -11,7 +11,7 @@ const Contact = () => {
       </div>
       <div className={`bg-cream ${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
-          <Request />
+					<RequestForm />
         </div>
       </div>
 

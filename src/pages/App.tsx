@@ -8,7 +8,6 @@ import {
   WhyUs,
   // About,
   WorkArea,
-  // Request,
   RequestForm,
   Services,
   Whatsapp,
