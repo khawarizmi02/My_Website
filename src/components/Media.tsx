@@ -58,11 +58,11 @@ const Media = () => {
       ref={mediaRef}
       className={`${styles.paddingY} ${styles.flexCenter} flex-col relative `}
     >
-      <div className="center">
+      {/* <div className="center">
         <h1 className="text-center text-black text-[50px] font-extrabold leading-relaxed">
           Media
         </h1>
-      </div>
+      </div> */}
       <Carousel className="w-full px-10 relative">
         <CarouselContent>
           {data.map((item, index) => (
