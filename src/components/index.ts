@@ -11,6 +11,8 @@ import RequestForm from "./RequestForm";
 import Whatsapp from "./Whatsapp";
 import Media from "./Media";
 import Values from "./Values";
+import AreaCover from "./AreaCover";
+import Locations from "./Locations";
 
 export {
   Hero,
@@ -26,4 +28,6 @@ export {
   RequestForm,
   Whatsapp,
   Values,
+	AreaCover,
+	Locations
 };

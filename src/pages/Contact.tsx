@@ -1,4 +1,4 @@
-import Locations from "@/components/Locations";
+import { Locations, AreaCover } from "../components";
 
 import styles from "../style";
 import { Navbar, Footer, Whatsapp, RequestForm } from "../components";
@@ -13,6 +13,7 @@ const Contact = () => {
       </div>
       <div className={`bg-cream ${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
+					<AreaCover />
           <Locations />
           <RequestForm />
         </div>
